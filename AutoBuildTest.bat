@@ -1,5 +1,6 @@
 @ECHO OFF
-REM ECHO Congratulations! Your batch file executed successfully
-javac HelloWorld.java
-java HelloWorld
+cd helloworld
+call mvn compile
+call mvn exec:java -Dexec.mainClass="com.philips.bootcamp.helloworld.App"
+call mvn test
 PAUSE
