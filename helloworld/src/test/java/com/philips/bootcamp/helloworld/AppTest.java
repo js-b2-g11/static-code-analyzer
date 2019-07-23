@@ -12,15 +12,23 @@ import org.junit.Test;
  */
 public class AppTest 
 {
+    //Positive Testcsae
     @Test
-    public void testPrint() {
-        // TODO Auto-generated method stub
+    public void testPositve() {
         final ByteArrayOutputStream outContent = new ByteArrayOutputStream();
- 
         System.setOut(new PrintStream(outContent));
-        App hw = new App();
-        hw.printMessage();
+        App helloWorldObjPos = new App();
+        helloWorldObjPos.printMessage();
         assertEquals("Hello World!", outContent.toString());
- 
+    }
+
+    //Negative Testcase
+    @Test
+    public void testNegative() {
+        final ByteArrayOutputStream outContent = new ByteArrayOutputStream();
+        System.setOut(new PrintStream(outContent));
+        App helloWorldObjNeg = new App();
+        helloWorldObjNeg.printMessage();
+        assertEquals("Hella World!", outContent.toString());
     }
 }
