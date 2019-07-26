@@ -1,2 +1,7 @@
 *.class
-.metadata/
+.metadata
+/helloworld/.metadata/
+/helloworld/target/
+/helloworld/.classpath
+/helloworld/.settings
+/helloworld/*.project
