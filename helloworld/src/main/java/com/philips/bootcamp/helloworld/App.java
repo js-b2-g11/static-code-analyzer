@@ -5,7 +5,8 @@ package com.philips.bootcamp.helloworld;
  *
  */
 public class App 
-{        
+{
+    // private int anotherUselessVariable = 303;        
     public void printMessage() {
     	System.out.print("Hello World!");
     }
