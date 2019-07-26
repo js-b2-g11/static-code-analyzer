@@ -7,6 +7,7 @@
   <groupId>com.philips.bootcamp</groupId>
   <artifactId>helloworld</artifactId>
   <version>0.0.1-SNAPSHOT</version>
+  <packaging>jar</packaging>
 
   <name>helloworld</name>
   <!-- FIXME change it to the project's website -->
@@ -25,11 +26,46 @@
       <version>4.11</version>
       <scope>test</scope>
     </dependency>
-  </dependencies>
+   </dependencies>
+    
+    
+   	<reporting>
+        <plugins>
+      
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-pmd-plugin</artifactId>
+                <version>3.11.0</version>
+            </plugin>                        
+        </plugins>
+    </reporting>
+
 
   <build>
     <pluginManagement><!-- lock down plugins versions to avoid using Maven defaults (may be moved to parent pom) -->
       <plugins>
+      <plugin>            
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-checkstyle-plugin</artifactId>
+          <version>2.17</version>
+          
+          <executions>
+            <execution>
+            <id>validate</id>
+            <phase>validate</phase>
+              <configuration>
+                <encoding>UTF-8</encoding>
+                <consoleOutput>true</consoleOutput>
+                <failsOnError>true</failsOnError>
+                <linkXRef>false</linkXRef>
+              </configuration>
+              <goals>
+                <goal>check</goal>
+              </goals>
+            </execution>
+          </executions>
+      </plugin> 
+
         <!-- clean lifecycle, see https://maven.apache.org/ref/current/maven-core/lifecycles.html#clean_Lifecycle -->
         <plugin>
           <artifactId>maven-clean-plugin</artifactId>

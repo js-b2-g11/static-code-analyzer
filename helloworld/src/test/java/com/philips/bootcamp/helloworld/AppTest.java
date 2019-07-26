@@ -13,6 +13,7 @@ import org.junit.Test;
 public class AppTest 
 {
     //Positive Testcsae
+	private int someVariable = 404;
     @Test
     public void testPositve() {
         final ByteArrayOutputStream outContent = new ByteArrayOutputStream();
@@ -21,14 +22,5 @@ public class AppTest
         helloWorldObjPos.printMessage();
         assertEquals("Hello World!", outContent.toString());
     }
-
-    //Negative Testcase
-    @Test
-    public void testNegative() {
-        final ByteArrayOutputStream outContent = new ByteArrayOutputStream();
-        System.setOut(new PrintStream(outContent));
-        App helloWorldObjNeg = new App();
-        helloWorldObjNeg.printMessage();
-        assertEquals("Hella World!", outContent.toString());
-    }
+    
 }
