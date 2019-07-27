@@ -12,8 +12,7 @@ import org.junit.Test;
  */
 public class AppTest 
 {
-    //Positive Testcsae
-	private int someVariable = 404;
+    //Positive Testcsae	
     @Test
     public void testPositve() {
         final ByteArrayOutputStream outContent = new ByteArrayOutputStream();
