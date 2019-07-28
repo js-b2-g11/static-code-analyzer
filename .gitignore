@@ -5,3 +5,9 @@ helloworld/target/
 helloworld/*.classpath
 helloworld/.settings/
 helloworld/*.project
+analyzer/.metadata/
+analyzer/target/
+analyzer/*.classpath
+analyzer/.settings/
+analyzer/*.project
+analyzer/*.txt
