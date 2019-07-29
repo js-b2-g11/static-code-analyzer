@@ -1,5 +1,10 @@
 package com.philips.bootcamp.analyzer;
 
+import lombok.Getter;
+import lombok.Setter;
+
+@Getter
+@Setter
 public class CheckstyleReportGenerator {
 	
 	private String cmdString;
@@ -8,6 +13,7 @@ public class CheckstyleReportGenerator {
 	private String rulesetCheckstyle;
 	private String outputFile;
 	
+
 	public CheckstyleReportGenerator(String filepath) {		
 		this.filepath = filepath;
 		this.cmdString = "cmd /c java -jar ";
@@ -15,46 +21,6 @@ public class CheckstyleReportGenerator {
 		this.rulesetCheckstyle = "/google_checks.xml ";
 		this.outputFile = "reportCheckStyle.txt";
 	}	
-
-	public String getCmdString() {
-		return cmdString;
-	}
-
-	public void setCmdString(String cmdString) {
-		this.cmdString = cmdString;
-	}
-
-	public String getFilepath() {
-		return filepath;
-	}
-
-	public void setFilepath(String filepath) {
-		this.filepath = filepath;
-	}
-
-	public String getCheckstyleJarpath() {
-		return checkstyleJarpath;
-	}
-
-	public void setCheckstyleJarpath(String checkstyleJarpath) {
-		this.checkstyleJarpath = checkstyleJarpath;
-	}
-
-	public String getRulesetCheckstyle() {
-		return rulesetCheckstyle;
-	}
-
-	public void setRulesetCheckstyle(String rulesetCheckstyle) {
-		this.rulesetCheckstyle = rulesetCheckstyle;
-	}
-	
-	public String getOutputFile() {
-		return outputFile;
-	}
-
-	public void setOutputFile(String outputFile) {
-		this.outputFile = outputFile;
-	}
 	
 	public void generateReport() {
 		try {		
