@@ -1,6 +1,6 @@
 package com.philips.bootcamp.analyzer;
 
-public class ValidateFile{
+public class ValidateAndMergeFile{
     public void checkFile(String filepath) {
         if (InputFile.isValidPath(filepath)) {
 
