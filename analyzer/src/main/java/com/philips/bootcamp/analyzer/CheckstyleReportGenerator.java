@@ -17,7 +17,7 @@ public class CheckstyleReportGenerator {
 	public CheckstyleReportGenerator(String filepath) {		
 		this.filepath = filepath;
 		this.cmdString = "cmd /c java -jar ";
-		this.checkstyleJarpath = "C:/Users/320053825/Downloads/checkstyle-8.22-all.jar";
+		this.checkstyleJarpath = "C:/Checkstyle/checkstyle-8.22-all.jar";
 		this.rulesetCheckstyle = "/google_checks.xml ";
 		this.outputFile = "reportCheckStyle.txt";
 	}	

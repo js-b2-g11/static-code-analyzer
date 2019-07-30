@@ -7,7 +7,7 @@
   <groupId>com.philips.bootcamp</groupId>
   <artifactId>analyzer</artifactId>
   <version>0.0.1-SNAPSHOT</version>
-
+  
   <name>analyzer</name>
   <!-- FIXME change it to the project's website -->
   <url>http://www.example.com</url>
@@ -16,14 +16,21 @@
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <maven.compiler.source>1.7</maven.compiler.source>
     <maven.compiler.target>1.7</maven.compiler.target>
+    <junit.version>4.11</junit.version>
   </properties>
-
+  
   <dependencies>
     <dependency>
       <groupId>junit</groupId>
       <artifactId>junit</artifactId>
-      <version>4.11</version>
+      <version>${junit.version}</version>
       <scope>test</scope>
+    </dependency>
+     <dependency>
+        <groupId>org.projectlombok</groupId>
+        <artifactId>lombok</artifactId>
+        <version>1.18.4</version>
+        <scope>provided</scope>
     </dependency>
   </dependencies>
 
