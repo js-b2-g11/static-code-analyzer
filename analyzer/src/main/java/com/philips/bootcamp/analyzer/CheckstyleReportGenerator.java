@@ -1,5 +1,7 @@
 package com.philips.bootcamp.analyzer;
 
+import com.philips.bootcamp.utils.Values;
+
 import lombok.Getter;
 import lombok.Setter;
 
@@ -15,11 +17,11 @@ public class CheckstyleReportGenerator {
 	
 
 	public CheckstyleReportGenerator(String filepath) {		
-		this.filepath = filepath;
-		this.cmdString = "cmd /c java -jar ";
-		this.checkstyleJarpath = "C:/Checkstyle/checkstyle-8.22-all.jar";
-		this.rulesetCheckstyle = "/google_checks.xml ";
-		this.outputFile = "reportCheckStyle.txt";
+		this.filepath = filepath;		
+		this.cmdString = Values.CHECKSTYLE_CMD;
+		this.checkstyleJarpath = Values.CHECKSTYLE_PATH;
+		this.rulesetCheckstyle = Values.CHECKSTYLE_RULESET;
+		this.outputFile = Values.CHECKSTYLE_OUTPUT_FILE;
 	}	
 	
 	public void generateReport() {

@@ -1,5 +1,7 @@
 package com.philips.bootcamp.analyzer;
 
+import com.philips.bootcamp.utils.Values;
+
 import lombok.Getter;
 import lombok.Setter;
 
@@ -15,10 +17,10 @@ public class PmdReportGenerator {
     
     public PmdReportGenerator(String filepath) {
     	this.filepath = filepath;
-    	this.pmd = "pmd.bat -d ";
+    	this.pmd = Values.PMD_CMD;
     	this.format = "text";
-    	this.ruleset = "category/java/codestyle.xml";
-    	this.outputFile = "reportPmd.txt";
+    	this.ruleset = Values.PMD_RULESET;
+    	this.outputFile = Values.PMD_OUTPUT_FILE;
     }
         
 	public void generateReport(){		
