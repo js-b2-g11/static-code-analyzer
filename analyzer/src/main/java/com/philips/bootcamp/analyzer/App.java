@@ -16,28 +16,10 @@ public class App
     	try {
     		
     		if (args.length > 0) {
-    			
+ 
     			String filepath = args[0];
-    			
-    			if (InputFile.isValidPath(filepath)) {
-        			
-    				System.out.println("Valid file path detected!");
-    				
-    				PmdReportGenerator reportPmd = new PmdReportGenerator(filepath);
-    	    		
-    	    		reportPmd.generateReport();
-    	    		
-    	    		CheckstyleReportGenerator reportCheckstyle = new CheckstyleReportGenerator(filepath);
-    	    		
-    	    		reportCheckstyle.generateReport();
-    	    		
-    	    		UnifyReport.mergeReports(reportPmd, reportCheckstyle);    	    		    	    		
-    				
-        		} else {
-        			
-        			System.out.println("Invalid file path specified");
-        			System.exit(0);
-        		}
+    			ValidateFile vf = new ValidateFile();
+				vf.checkFile(filepath);
     			
     		} else {
     			

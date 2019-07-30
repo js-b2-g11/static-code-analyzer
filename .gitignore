@@ -9,3 +9,8 @@ analyzer/target/
 analyzer/*.classpath
 analyzer/.settings/
 analyzer/*.txt
+analyzer/*.iml
+analyzer/*idea
+analyzer/bin/*.iml
+analyzer/bin/*idea
+analyzer/bin/target/
