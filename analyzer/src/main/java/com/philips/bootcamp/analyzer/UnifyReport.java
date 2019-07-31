@@ -5,6 +5,8 @@ import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.sql.Timestamp;
+import java.util.Date;
 
 import com.philips.bootcamp.utils.Values;
 
@@ -13,7 +15,7 @@ public class UnifyReport {
     public static int countPmdReportlines=0;
     public static int countCheckstyleReportlines=0;
 	
-	public static void mergeReports(PmdReportGenerator pmdReport, CheckstyleReportGenerator checkstyleReport) {
+	public static void mergeReports(PmdReportGenerator pmdReport, CheckstyleReportGenerator checkstyleReport, Timestamp[] reportTimeStamps) {
 		try {
 			PrintWriter pw = new PrintWriter(Values.FINAL_OUTPUT_FILE);                 
 			
@@ -23,12 +25,14 @@ public class UnifyReport {
 			  
 			String line1 = br1.readLine(); 
 			String line2 = br2.readLine();                       
+						
 			
 			// 2 loops to copy lines of both reports into a single file 			
 			
-			pw.println("----------------------------------------------------------------------------------------------------------------------------------------------------------");
-			pw.println("\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tPMD Report");
-			pw.println("----------------------------------------------------------------------------------------------------------------------------------------------------------");
+			pw.println("-----------------------------------------------------------------------------------------------");
+			pw.println("\t\t\t\t\t\t\t\t\tPMD Report");
+			pw.println("-----------------------------------------------------------------------------------------------\n\n");			
+			pw.println("PMD report start time: " + reportTimeStamps[0] + "\n");
 			while (line1 != null) 
 			{             	
 			    if(line1 != null) 
@@ -37,10 +41,12 @@ public class UnifyReport {
 			        line1 = br1.readLine();
 			        countPmdReportlines++;
 			    }
-			}
-			pw.println("-----------------------------------------------------------------------------------------------------------------------------------------------------------");
-			pw.println("\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tCheckstyle Report");
-			pw.println("------------------------------------------------------------------------------------------------------------------------------------------------------------");
+			}			
+			pw.println("PMD report end time: " + reportTimeStamps[1] + "\n");
+			pw.println("-----------------------------------------------------------------------------------------------");
+			pw.println("\t\t\t\t\t\t\t\t\tCheckstyle Report");
+			pw.println("-----------------------------------------------------------------------------------------------\n\n");
+			pw.println("Checkstyle report start time: " + reportTimeStamps[2] + "\n");
 			while (line2 != null)
 			{
 			    if(line2 != null) 
@@ -50,7 +56,7 @@ public class UnifyReport {
 			        countCheckstyleReportlines++;
 			    } 
 			} 
-     
+			pw.println("Checkstyle report end time: " + reportTimeStamps[3] + "\n");
 			pw.flush(); 
 			  
 			// closing resources 
