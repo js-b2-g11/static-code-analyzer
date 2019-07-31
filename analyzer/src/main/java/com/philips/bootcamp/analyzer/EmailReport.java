@@ -34,7 +34,7 @@ public class EmailReport {
 		System.out.println("Report successfully sent to your mail");
 	}
  
-	public static void generateAndSendEmail() throws AddressException, MessagingException {
+	public static void generateAndSendEmail() {
 		
 		try {
 			mailServerProperties = System.getProperties();
