@@ -13,24 +13,25 @@ public class MergeFile{
 			
             PmdReportGenerator reportPmd = new PmdReportGenerator(filepath); 
             
-			pmdStartTime = new Timestamp(new Date().getTime());			
-            System.out.println(pmdStartTime);
+			pmdStartTime = new Timestamp(new Date().getTime());
+			
+			reportPmd.setReportStartTime(pmdStartTime);            
 			reportPmd.generateReport();
             
-			pmdEndTime = new Timestamp(new Date().getTime());                      
-			System.out.println(pmdEndTime);
+			pmdEndTime = new Timestamp(new Date().getTime());                      		
+			reportPmd.setReportEndTime(pmdEndTime);
 			
             CheckstyleReportGenerator reportCheckstyle = new CheckstyleReportGenerator(filepath);
                         
             checkstyleStartTime = new Timestamp(new Date().getTime());
-            System.out.println(checkstyleStartTime);
+            reportCheckstyle.setReportStartTime(checkstyleStartTime);
             reportCheckstyle.generateReport();
             
             checkstyleEndTime = new Timestamp(new Date().getTime());
-            System.out.println(checkstyleEndTime);
+            reportCheckstyle.setReportEndTime(checkstyleEndTime);
             Timestamp[] reportTimeStamps = {pmdStartTime, pmdEndTime, checkstyleStartTime, checkstyleEndTime};
             
-            UnifyReport.mergeReports(reportPmd, reportCheckstyle, reportTimeStamps);
+            UnifyReport.mergeReports(reportPmd, reportCheckstyle);
 
         } else {
 

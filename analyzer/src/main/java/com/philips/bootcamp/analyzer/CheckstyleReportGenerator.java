@@ -1,5 +1,7 @@
 package com.philips.bootcamp.analyzer;
 
+import java.sql.Timestamp;
+
 import com.philips.bootcamp.utils.Values;
 
 import lombok.Getter;
@@ -14,7 +16,8 @@ public class CheckstyleReportGenerator {
 	private String checkstyleJarpath;
 	private String rulesetCheckstyle;
 	private String outputFile;
-	
+	private Timestamp reportStartTime;
+	private Timestamp reportEndTime;
 
 	public CheckstyleReportGenerator(String filepath) {		
 		this.filepath = filepath;		

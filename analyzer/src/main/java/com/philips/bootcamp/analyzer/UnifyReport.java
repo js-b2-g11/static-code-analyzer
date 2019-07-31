@@ -15,7 +15,7 @@ public class UnifyReport {
     public static int countPmdReportlines=0;
     public static int countCheckstyleReportlines=0;
 	
-	public static void mergeReports(PmdReportGenerator pmdReport, CheckstyleReportGenerator checkstyleReport, Timestamp[] reportTimeStamps) {
+	public static void mergeReports(PmdReportGenerator pmdReport, CheckstyleReportGenerator checkstyleReport) {
 		try {
 			PrintWriter pw = new PrintWriter(Values.FINAL_OUTPUT_FILE);                 
 			
@@ -32,7 +32,7 @@ public class UnifyReport {
 			pw.println("-----------------------------------------------------------------------------------------------");
 			pw.println("\t\t\t\t\t\t\t\t\tPMD Report");
 			pw.println("-----------------------------------------------------------------------------------------------\n\n");			
-			pw.println("PMD report start time: " + reportTimeStamps[0] + "\n");
+			pw.println("PMD report start time: " + pmdReport.getReportStartTime() + "\n");
 			while (line1 != null) 
 			{             	
 			    if(line1 != null) 
@@ -42,11 +42,11 @@ public class UnifyReport {
 			        countPmdReportlines++;
 			    }
 			}			
-			pw.println("PMD report end time: " + reportTimeStamps[1] + "\n");
+			pw.println("PMD report end time: " + pmdReport.getReportEndTime() + "\n");
 			pw.println("-----------------------------------------------------------------------------------------------");
 			pw.println("\t\t\t\t\t\t\t\t\tCheckstyle Report");
 			pw.println("-----------------------------------------------------------------------------------------------\n\n");
-			pw.println("Checkstyle report start time: " + reportTimeStamps[2] + "\n");
+			pw.println("Checkstyle report start time: " + checkstyleReport.getReportStartTime() + "\n");
 			while (line2 != null)
 			{
 			    if(line2 != null) 
@@ -56,7 +56,7 @@ public class UnifyReport {
 			        countCheckstyleReportlines++;
 			    } 
 			} 
-			pw.println("Checkstyle report end time: " + reportTimeStamps[3] + "\n");
+			pw.println("Checkstyle report end time: " + checkstyleReport.getReportEndTime() + "\n");
 			pw.flush(); 
 			  
 			// closing resources 
