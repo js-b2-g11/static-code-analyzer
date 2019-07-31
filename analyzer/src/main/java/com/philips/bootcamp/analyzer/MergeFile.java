@@ -3,8 +3,8 @@ package com.philips.bootcamp.analyzer;
 import java.sql.Timestamp;
 import java.util.Date;
 
-public class ValidateAndMergeFile{
-    public void checkFile(String filepath) {
+public class MergeFile{
+    public void checkFileAndMerge(String filepath) {
         if (InputFile.isValidPath(filepath)) {
 
             System.out.println("Valid file path detected!");

@@ -18,10 +18,9 @@ public class App
     		if (args.length > 0) {
  
     			String filepath = args[0];
-    			ValidateAndMergeFile vf = new ValidateAndMergeFile();
-				vf.checkFile(filepath);
-//    			EmailReport.executeSendEmail();
-				
+    			MergeFile vf = new MergeFile();
+				vf.checkFileAndMerge(filepath);
+    			
     		} else {
     			
     			System.out.print("No file path specified.\n");
