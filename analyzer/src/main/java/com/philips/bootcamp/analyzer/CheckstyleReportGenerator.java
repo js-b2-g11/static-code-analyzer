@@ -26,8 +26,8 @@ public class CheckstyleReportGenerator {
 	
 	public void generateReport() {
 		try {		
-			String executeCheckstyleString = this.checkstyleJarpath + " -c "+ this.rulesetCheckstyle + this.filepath;
-            Process checkstyleProcess = Runtime.getRuntime().exec(this.cmdString + executeCheckstyleString + " > " + this.outputFile);
+			String executeCheckstyleString = checkstyleJarpath + " -c "+ rulesetCheckstyle + filepath;
+            Process checkstyleProcess = Runtime.getRuntime().exec(cmdString + executeCheckstyleString + " > " + outputFile);
             checkstyleProcess.waitFor();   
             System.out.print("Checkstyle report generated.\n");
 		}

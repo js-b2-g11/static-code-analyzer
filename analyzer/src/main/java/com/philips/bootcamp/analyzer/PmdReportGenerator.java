@@ -25,8 +25,8 @@ public class PmdReportGenerator {
         
 	public void generateReport(){		
         try {
-            String executePmdString = pmd + filepath + " -f "+ this.format +" -R " + this.ruleset;
-            Process pmdProcess = Runtime.getRuntime().exec(executePmdString + " -r " + this.outputFile);
+            String executePmdString = pmd + filepath + " -f "+ format +" -R " + ruleset;
+            Process pmdProcess = Runtime.getRuntime().exec(executePmdString + " -r " + outputFile);
             
             pmdProcess.waitFor();
             
