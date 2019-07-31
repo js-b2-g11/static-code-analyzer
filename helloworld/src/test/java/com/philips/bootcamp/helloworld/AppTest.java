@@ -21,5 +21,4 @@ public class AppTest
         helloWorldObjPos.printMessage();
         assertEquals("Hello World!", outContent.toString());
     }
-    
 }

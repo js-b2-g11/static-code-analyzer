@@ -25,16 +25,16 @@ public class PmdReportGenerator {
         
 	public void generateReport(){		
         try {
-            String executePmdString = this.pmd + this.filepath + " -f "+ this.format +" -R " + this.ruleset;
+            String executePmdString = pmd + filepath + " -f "+ this.format +" -R " + this.ruleset;
             Process pmdProcess = Runtime.getRuntime().exec(executePmdString + " -r " + this.outputFile);
             
             pmdProcess.waitFor();
             
-            System.out.println("PMD report Generated");
+            System.out.print("PMD report generated\n");
             
         } catch (Exception e) {
         	e.printStackTrace(); 
-            System.out.println("error occured");             
+            System.out.print("error occured\n");             
         }
     }
 }
