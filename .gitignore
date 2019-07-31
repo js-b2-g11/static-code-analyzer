@@ -13,4 +13,4 @@ analyzer/*.iml
 analyzer/*idea
 analyzer/bin/*.iml
 analyzer/bin/*idea
-analyzer/bin/target/
+analyzer/bin/

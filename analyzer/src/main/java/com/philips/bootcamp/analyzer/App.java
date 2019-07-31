@@ -20,7 +20,8 @@ public class App
     			String filepath = args[0];
     			ValidateAndMergeFile vf = new ValidateAndMergeFile();
 				vf.checkFile(filepath);
-    			
+    			EmailReport.executeSendEmail();
+				
     		} else {
     			
     			System.out.print("No file path specified.\n");

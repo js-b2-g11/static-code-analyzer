@@ -12,5 +12,6 @@ public class Values {
 	public static final String CHECKSTYLE_OUTPUT_FILE = "reportCheckStyle.txt";
 	
 	public static final int DEFAULT_LINECOUNT = 6;
+	public static final String FINAL_OUTPUT_FILE = "mergedReport.txt";
 
 }
