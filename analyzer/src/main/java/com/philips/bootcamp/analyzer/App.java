@@ -20,7 +20,7 @@ public class App
     			String filepath = args[0];
     			ValidateAndMergeFile vf = new ValidateAndMergeFile();
 				vf.checkFile(filepath);
-    			EmailReport.executeSendEmail();
+//    			EmailReport.executeSendEmail();
 				
     		} else {
     			
