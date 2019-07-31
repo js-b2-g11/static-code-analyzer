@@ -10,5 +10,7 @@ public class Values {
 	public static final String CHECKSTYLE_RULESET = "/google_checks.xml ";
 	public static final String CHECKSTYLE_CMD = "cmd /c java -jar ";
 	public static final String CHECKSTYLE_OUTPUT_FILE = "reportCheckStyle.txt";
+	
+	public static final int DEFAULT_LINECOUNT = 6;
 
 }

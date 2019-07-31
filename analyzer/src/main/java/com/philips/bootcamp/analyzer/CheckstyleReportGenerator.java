@@ -32,7 +32,7 @@ public class CheckstyleReportGenerator {
             System.out.print("Checkstyle report generated.\n");
 		}
 		catch(Exception e){			
-			System.out.println("error occured"); 
+			System.out.print("error occured\n"); 
 	        e.printStackTrace(); 		
 		}
 	}	

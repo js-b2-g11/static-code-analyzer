@@ -8,6 +8,9 @@ import java.io.PrintWriter;
 
 public class UnifyReport {
 	
+    public static int countPmdReportlines=0;
+    public static int countCheckstyleReportlines=0;
+	
 	public static void mergeReports(PmdReportGenerator pmdReport, CheckstyleReportGenerator checkstyleReport) {
 		try {
 			PrintWriter pw = new PrintWriter("mergedReport.txt");                 
@@ -21,26 +24,28 @@ public class UnifyReport {
 			
 			// 2 loops to copy lines of both reports into a single file 			
 			
-			pw.println("------------------------------------------------------------------");
-			pw.println("\t\t\t\t\t\t\tPMD Report");
-			pw.println("------------------------------------------------------------------");
+			pw.println("----------------------------------------------------------------------------------------------------------------------------------------------------------");
+			pw.println("\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tPMD Report");
+			pw.println("----------------------------------------------------------------------------------------------------------------------------------------------------------");
 			while (line1 != null) 
 			{             	
 			    if(line1 != null) 
 			    {                 	
 			        pw.println(line1); 
-			        line1 = br1.readLine(); 
+			        line1 = br1.readLine();
+			        countPmdReportlines++;
 			    }
 			}
-			pw.println("------------------------------------------------------------------");
-			pw.println("\t\t\t\t\t\t\tCheckstyle Report");
-			pw.println("------------------------------------------------------------------");
+			pw.println("-----------------------------------------------------------------------------------------------------------------------------------------------------------");
+			pw.println("\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tCheckstyle Report");
+			pw.println("------------------------------------------------------------------------------------------------------------------------------------------------------------");
 			while (line2 != null)
 			{
 			    if(line2 != null) 
 			    {                 	
 			        pw.println(line2); 
 			        line2 = br2.readLine(); 
+			        countCheckstyleReportlines++;
 			    } 
 			} 
      
