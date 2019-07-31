@@ -71,7 +71,8 @@ public class AppTest
 		CheckstyleReportGenerator cgr = new CheckstyleReportGenerator(filepath);
 		pmd.generateReport();
 		cgr.generateReport();
-		UnifyReport.mergeReports(pmd, cgr);	
+		
+		UnifyReport.mergeReports(pmd,cgr);	
 		File f1 = new File("../analyzer/mergedReport.txt");
 		int lineCount=0;
 		FileReader fr = new FileReader(f1);

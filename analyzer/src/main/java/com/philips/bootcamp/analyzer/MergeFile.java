@@ -7,7 +7,7 @@ public class MergeFile{
     public void checkFileAndMerge(String filepath) {
         if (InputFile.isValidPath(filepath)) {
 
-            System.out.println("Valid file path detected!");
+            System.out.print("Valid file path detected!\n");
                            		
 			Timestamp pmdStartTime, pmdEndTime, checkstyleStartTime, checkstyleEndTime;
 			

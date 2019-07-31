@@ -14,3 +14,4 @@ analyzer/*idea
 analyzer/bin/*.iml
 analyzer/bin/*idea
 analyzer/bin/
+analyzer/*.factorypath

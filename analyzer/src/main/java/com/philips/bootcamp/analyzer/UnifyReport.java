@@ -32,7 +32,7 @@ public class UnifyReport {
 			pw.println("-----------------------------------------------------------------------------------------------");
 			pw.println("\t\t\t\t\t\t\t\t\tPMD Report");
 			pw.println("-----------------------------------------------------------------------------------------------\n\n");			
-			pw.println("PMD report start time: " + pmdReport.getReportStartTime() + "\n");
+			pw.println("PMD report start time: " + pmdReport.getReportStartTime());
 			while (line1 != null) 
 			{             	
 			    if(line1 != null) 
@@ -46,7 +46,7 @@ public class UnifyReport {
 			pw.println("-----------------------------------------------------------------------------------------------");
 			pw.println("\t\t\t\t\t\t\t\t\tCheckstyle Report");
 			pw.println("-----------------------------------------------------------------------------------------------\n\n");
-			pw.println("Checkstyle report start time: " + checkstyleReport.getReportStartTime() + "\n");
+			pw.println("Checkstyle report start time: " + checkstyleReport.getReportStartTime());
 			while (line2 != null)
 			{
 			    if(line2 != null) 
@@ -56,7 +56,7 @@ public class UnifyReport {
 			        countCheckstyleReportlines++;
 			    } 
 			} 
-			pw.println("Checkstyle report end time: " + checkstyleReport.getReportEndTime() + "\n");
+			pw.println("Checkstyle report end time: " + checkstyleReport.getReportEndTime());
 			pw.flush(); 
 			  
 			// closing resources 
