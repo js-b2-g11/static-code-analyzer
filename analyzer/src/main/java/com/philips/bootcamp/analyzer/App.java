@@ -18,8 +18,8 @@ public class App
     		if (args.length > 0) {
  
     			String filepath = args[0];
-    			ValidateAndMergeFile vf = new ValidateAndMergeFile();
-				vf.checkFile(filepath);
+    			MergeFile vf = new MergeFile();
+				vf.checkFileAndMerge(filepath);
     			
     		} else {
     			
