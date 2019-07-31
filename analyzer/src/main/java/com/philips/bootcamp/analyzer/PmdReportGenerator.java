@@ -30,7 +30,7 @@ public class PmdReportGenerator {
             
             pmdProcess.waitFor();
             
-            System.out.println("PMD report Generated");
+            System.out.print("PMD report generated\n");
             
         } catch (Exception e) {
         	e.printStackTrace(); 

@@ -4,7 +4,7 @@ public class ValidateAndMergeFile{
     public void checkFile(String filepath) {
         if (InputFile.isValidPath(filepath)) {
 
-            System.out.println("Valid file path detected!");
+            System.out.print("Valid file path detected!\n");
             PmdReportGenerator reportPmd = new PmdReportGenerator(filepath);
             reportPmd.generateReport();
             CheckstyleReportGenerator reportCheckstyle = new CheckstyleReportGenerator(filepath);
@@ -13,8 +13,8 @@ public class ValidateAndMergeFile{
 
         } else {
 
-            System.out.println("Invalid file path specified");
-            System.exit(0);
+            System.out.print("Invalid file path specified\n");
+//            System.exit(0);
         }
     }
 }

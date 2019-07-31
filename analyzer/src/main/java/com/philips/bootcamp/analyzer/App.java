@@ -23,13 +23,13 @@ public class App
     			
     		} else {
     			
-    			System.out.println("No file path specified.");
-    			System.exit(0);    			
+    			System.out.print("No file path specified.\n");
+//    			System.exit(0);    			
     		}
     		
     	} catch(Exception e) {
     		
-    		System.out.println("exception happened - here's what I know: ");
+    		System.out.print("exception happened - here's what I know: \n");
             e.printStackTrace();
             System.exit(-1);
             

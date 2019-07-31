@@ -28,10 +28,8 @@ public class CheckstyleReportGenerator {
 		try {		
 			String executeCheckstyleString = this.checkstyleJarpath + " -c "+ this.rulesetCheckstyle + this.filepath;
             Process checkstyleProcess = Runtime.getRuntime().exec(this.cmdString + executeCheckstyleString + " > " + this.outputFile);
-            
-            checkstyleProcess.waitFor();
-            
-            System.out.println("Checkstyle report generated.");
+            checkstyleProcess.waitFor();   
+            System.out.print("Checkstyle report generated.\n");
 		}
 		catch(Exception e){			
 			System.out.println("error occured"); 

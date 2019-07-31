@@ -51,7 +51,7 @@ public class UnifyReport {
 			br2.close(); 
 			pw.close(); 
 			
-			System.out.println("Merged pmd report and checkstyle report successfully");
+			System.out.print("Merged pmd report and checkstyle report successfully\n");
 			
 		} catch (FileNotFoundException e) {
 			e.printStackTrace();
