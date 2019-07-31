@@ -6,11 +6,13 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.io.PrintWriter;
 
+import com.philips.bootcamp.utils.Values;
+
 public class UnifyReport {
 	
 	public static void mergeReports(PmdReportGenerator pmdReport, CheckstyleReportGenerator checkstyleReport) {
 		try {
-			PrintWriter pw = new PrintWriter("mergedReport.txt");                 
+			PrintWriter pw = new PrintWriter(Values.FINAL_OUTPUT_FILE);                 
 			
 			// BufferedReader object for pmdReport and checkstyleReport 
 			BufferedReader br1 = new BufferedReader(new FileReader(pmdReport.getOutputFile())); 
