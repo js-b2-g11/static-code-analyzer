@@ -29,7 +29,7 @@ public class AppTest
 
 	
     @Test
-    public void TestReportGeneration() throws InterruptedException
+    public void testReportGeneration() throws InterruptedException
     {
     	   final ByteArrayOutputStream outContent = new ByteArrayOutputStream();
            System.setOut(new PrintStream(outContent));
