@@ -19,7 +19,7 @@ public class App
  
     			String filepath = args[0];
     			MergeFile vf = new MergeFile();
-				vf.checkFileAndMerge(filepath);
+				vf.genAndMergeFile(filepath);
     			
     		} else {
     			
@@ -32,7 +32,6 @@ public class App
     		System.out.print("exception happened - here's what I know: \n");
             e.printStackTrace();
             System.exit(-1);
-            
     	} 
     }
 }

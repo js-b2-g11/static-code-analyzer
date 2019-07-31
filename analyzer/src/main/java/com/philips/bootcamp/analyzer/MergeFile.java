@@ -4,7 +4,7 @@ import java.sql.Timestamp;
 import java.util.Date;
 
 public class MergeFile{
-    public void checkFileAndMerge(String filepath) {
+    public void genAndMergeFile(String filepath) {
         if (InputFile.isValidPath(filepath)) {
 
             System.out.print("Valid file path detected!\n");

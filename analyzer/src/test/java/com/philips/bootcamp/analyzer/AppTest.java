@@ -12,6 +12,7 @@ import java.io.IOException;
 import java.io.PrintStream;
 import java.nio.Buffer;
 
+import org.junit.Ignore;
 import org.junit.Test;
 
 import com.philips.bootcamp.utils.Values;
@@ -63,6 +64,7 @@ public class AppTest
     	assertEquals("Checkstyle report generated.\n", outContent.toString());
     }
 	
+//	@Ignore("Run this testcase after building the package, Comment this code before testing")
 	@Test
 	public void testReportFileLineCount() throws InterruptedException, IOException
 	{
