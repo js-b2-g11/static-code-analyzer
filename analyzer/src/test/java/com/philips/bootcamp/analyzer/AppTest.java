@@ -107,4 +107,24 @@ public class AppTest
            App.main(args);
            assertEquals("No file path specified.\n", outContent.toString());
     }
+    
+    @Test
+    public void noFilepathforPmd() throws IOException, InterruptedException {
+    	final ByteArrayOutputStream outContent = new ByteArrayOutputStream();
+    	System.setOut(new PrintStream(outContent));
+    	String filepath = "";
+    	PmdReportGenerator pmd = new PmdReportGenerator(filepath);
+    	pmd.generateReport();
+    	assertEquals("Filepath not specified\n",outContent.toString());
+    }
+    
+    @Test
+    public void noFilepathforCheckstyle() throws IOException, InterruptedException {
+    	final ByteArrayOutputStream outContent = new ByteArrayOutputStream();
+    	System.setOut(new PrintStream(outContent));
+    	String filepath = "";
+    	CheckstyleReportGenerator crg = new CheckstyleReportGenerator(filepath);
+    	crg.generateReport();
+    	assertEquals("Filepath not specified\n",outContent.toString());
+    }
 }

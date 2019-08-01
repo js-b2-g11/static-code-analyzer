@@ -1,4 +1,4 @@
-package com.philips.bootcamp.analyzer;
+package com.philips.bootcamp.utils;
 
 import java.io.File;
 

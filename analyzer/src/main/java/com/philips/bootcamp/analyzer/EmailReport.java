@@ -24,7 +24,7 @@ public class EmailReport {
 	
 	final static String USER_EMAIL = "projectbootcamp6@gmail.com";
 	final static String USER_PASSWORD = "$qwerty123";		
-	final static String RECIPIENT_EMAIL = "jeev.chiran@gmail.com";
+	final static String RECIPIENT_EMAIL = "projectfinal316@gmail.com";
  
 	public static void executeSendEmail() throws AddressException, MessagingException {
 		generateAndSendEmail();
@@ -74,6 +74,5 @@ public class EmailReport {
 			System.out.println("error occured");
 			e.printStackTrace();
 		}		
-		
 	}
 }

@@ -1,5 +1,6 @@
 package com.philips.bootcamp.analyzer;
 
+import java.io.IOException;
 import java.sql.Timestamp;
 
 import com.philips.bootcamp.utils.Values;
@@ -27,16 +28,21 @@ public class CheckstyleReportGenerator {
 		this.outputFile = Values.CHECKSTYLE_OUTPUT_FILE;
 	}	
 	
-	public void generateReport() {
-		try {		
+	public void generateReport() throws IOException, InterruptedException {
+		
+		if(filepath == null || filepath.trim().length() == 0) {
+			try {
+	            throw new Exception("Filepath is not specified enter a valid filepath");
+	        } catch (Exception e) {
+//	            e.printStackTrace();
+	            System.out.print("Filepath not specified\n");
+	        } 
+		}
+		else {		
 			String executeCheckstyleString = checkstyleJarpath + " -c "+ rulesetCheckstyle + filepath;
 			Process checkstyleProcess = Runtime.getRuntime().exec(cmdString + executeCheckstyleString + " > " + outputFile);
             checkstyleProcess.waitFor();               
             System.out.print("Checkstyle report generated.\n");
 		}
-		catch(Exception e){			
-			System.out.print("error occured\n"); 
-	        e.printStackTrace(); 		
-		}
-	}	
+	}
 }

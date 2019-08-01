@@ -1,10 +1,13 @@
 package com.philips.bootcamp.analyzer;
 
+import java.io.IOException;
 import java.sql.Timestamp;
 import java.util.Date;
 
+import com.philips.bootcamp.utils.InputFile;
+
 public class MergeFile{
-    public void genAndMergeFile(String filepath) {
+    public void genAndMergeFile(String filepath) throws IOException, InterruptedException {
         if (InputFile.isValidPath(filepath)) {
 
             System.out.print("Valid file path detected!\n");

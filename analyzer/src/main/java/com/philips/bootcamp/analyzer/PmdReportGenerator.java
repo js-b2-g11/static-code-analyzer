@@ -1,5 +1,6 @@
 package com.philips.bootcamp.analyzer;
 
+import java.io.IOException;
 import java.sql.Timestamp;
 
 import com.philips.bootcamp.utils.Values;
@@ -27,18 +28,24 @@ public class PmdReportGenerator {
     	this.outputFile = Values.PMD_OUTPUT_FILE;
     }
         
-	public void generateReport(){		
-        try {
+	public void generateReport() throws IOException, InterruptedException{		
+		
+		if(filepath == null || filepath.trim().length() == 0) {
+			try {
+	            throw new Exception("Filepath is not specified enter a valid filepath");
+	        } catch (Exception e) {
+//	            e.printStackTrace();
+	            System.out.print("Filepath not specified\n");
+	        } 
+		}
+		else 
+        {
             String executePmdString = pmd + filepath + " -f "+ format +" -R " + ruleset;
             Process pmdProcess = Runtime.getRuntime().exec(executePmdString + " -r " + outputFile);
             
             pmdProcess.waitFor();
             
             System.out.print("PMD report generated\n");
-            
-        } catch (Exception e) {
-        	e.printStackTrace(); 
-            System.out.print("error occured\n");             
         }
-    }
+	}
 }
