@@ -11,7 +11,7 @@ public class Values {
 	public static final String CHECKSTYLE_CMD = "cmd /c java -jar ";
 	public static final String CHECKSTYLE_OUTPUT_FILE = "reportCheckStyle.txt";
 	
-	public static final int DEFAULT_LINECOUNT = 15;
+	public static final int DEFAULT_LINECOUNT = 17;
 	public static final String FINAL_OUTPUT_FILE = "mergedReport.txt";
 
 }

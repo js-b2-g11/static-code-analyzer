@@ -41,7 +41,8 @@ public class UnifyReport {
 			        line1 = br1.readLine();
 			        countPmdReportlines++;
 			    }
-			}			
+			}
+			pw.println("No. of issues found: " + countPmdReportlines);
 			pw.println("PMD report end time: " + pmdReport.getReportEndTime() + "\n");
 			pw.println("-----------------------------------------------------------------------------------------------");
 			pw.println("\t\t\t\t\t\t\t\t\tCheckstyle Report");
@@ -55,7 +56,8 @@ public class UnifyReport {
 			        line2 = br2.readLine(); 
 			        countCheckstyleReportlines++;
 			    } 
-			} 
+			}
+			pw.println("No. of issues found: " + countCheckstyleReportlines);
 			pw.println("Checkstyle report end time: " + checkstyleReport.getReportEndTime());
 			pw.flush(); 
 			  

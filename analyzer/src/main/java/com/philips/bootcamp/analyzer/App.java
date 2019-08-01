@@ -20,6 +20,7 @@ public class App
     			String filepath = args[0];
     			MergeFile vf = new MergeFile();
 				vf.genAndMergeFile(filepath);
+				EmailReport.executeSendEmail();
     			
     		} else {
     			

@@ -1,11 +1,9 @@
 package com.philips.bootcamp.analyzer;
 
 import java.util.Properties;
-
 import javax.activation.DataHandler;
 import javax.activation.DataSource;
 import javax.activation.FileDataSource;
-import javax.mail.BodyPart;
 import javax.mail.Message;
 import javax.mail.MessagingException;
 import javax.mail.Multipart;
@@ -16,7 +14,6 @@ import javax.mail.internet.InternetAddress;
 import javax.mail.internet.MimeBodyPart;
 import javax.mail.internet.MimeMessage;
 import javax.mail.internet.MimeMultipart;
-
 import com.philips.bootcamp.utils.Values;
  
 public class EmailReport {
@@ -25,13 +22,13 @@ public class EmailReport {
 	static Session getMailSession;
 	static MimeMessage generateMailMessage;
 	
-	final static String USER_EMAIL = "@gmail.com";
-	final static String USER_PASSWORD = "";	
+	final static String USER_EMAIL = "projectbootcamp6@gmail.com";
+	final static String USER_PASSWORD = "$qwerty123";		
 	final static String RECIPIENT_EMAIL = "jeev.chiran@gmail.com";
  
 	public static void executeSendEmail() throws AddressException, MessagingException {
 		generateAndSendEmail();
-		System.out.println("Report successfully sent to your mail");
+//		System.out.println("Report successfully sent to your mail");
 	}
  
 	public static void generateAndSendEmail() {
@@ -45,7 +42,7 @@ public class EmailReport {
 			getMailSession = Session.getDefaultInstance(mailServerProperties, null);
 			generateMailMessage = new MimeMessage(getMailSession);
 			
-			// Add recipients for mail
+			// Add recipients for mail						
 			generateMailMessage.addRecipient(Message.RecipientType.TO, new InternetAddress(RECIPIENT_EMAIL));			
 			
 			generateMailMessage.setSubject("Code report");

@@ -28,8 +28,7 @@ public class MergeFile{
             reportCheckstyle.generateReport();
             
             checkstyleEndTime = new Timestamp(new Date().getTime());
-            reportCheckstyle.setReportEndTime(checkstyleEndTime);
-            Timestamp[] reportTimeStamps = {pmdStartTime, pmdEndTime, checkstyleStartTime, checkstyleEndTime};
+            reportCheckstyle.setReportEndTime(checkstyleEndTime);            
             
             UnifyReport.mergeReports(reportPmd, reportCheckstyle);
 

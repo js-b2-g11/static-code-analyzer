@@ -34,7 +34,7 @@ public class AppTest
     {
     	   final ByteArrayOutputStream outContent = new ByteArrayOutputStream();
            System.setOut(new PrintStream(outContent));
-           String[] args = {"../analyzer"};
+           String[] args = {"../helloworld"};
            App.main(args);
            assertEquals("Valid file path detected!\n"
            		+ "PMD report generated\n"
@@ -47,7 +47,7 @@ public class AppTest
     {
     	final ByteArrayOutputStream outContent = new ByteArrayOutputStream();
     	System.setOut(new PrintStream(outContent));
-    	String filepath = "../analyzer";
+    	String filepath = "../helloworld";
     	PmdReportGenerator pmd = new PmdReportGenerator(filepath);
     	pmd.generateReport();
     	assertEquals("PMD report generated\n", outContent.toString());
@@ -58,7 +58,7 @@ public class AppTest
     {
     	final ByteArrayOutputStream outContent = new ByteArrayOutputStream(); 
     	System.setOut(new PrintStream(outContent));
-    	String filepath = "../analyzer";
+    	String filepath = "../helloworld";
     	CheckstyleReportGenerator crg = new CheckstyleReportGenerator(filepath);
     	crg.generateReport();
     	assertEquals("Checkstyle report generated.\n", outContent.toString());
@@ -68,7 +68,7 @@ public class AppTest
 	@Test
 	public void testReportFileLineCount() throws InterruptedException, IOException
 	{
-		String filepath = "../analyzer";
+		String filepath = "../helloworld";
 		PmdReportGenerator pmd = new PmdReportGenerator(filepath);
 		CheckstyleReportGenerator cgr = new CheckstyleReportGenerator(filepath);
 		pmd.generateReport();
