@@ -1,18 +1,13 @@
 package com.philips.bootcamp.analyzer;
 
 import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertTrue;
 
-import java.awt.image.BufferedImage;
 import java.io.BufferedReader;
 import java.io.ByteArrayOutputStream;
 import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
 import java.io.PrintStream;
-import java.nio.Buffer;
-
-import org.junit.Ignore;
 import org.junit.Test;
 
 import com.philips.bootcamp.utils.Values;
@@ -79,8 +74,8 @@ public class AppTest
 		int lineCount=0;
 		FileReader fr = new FileReader(f1);
 		BufferedReader br = new BufferedReader(fr);
-		String s;
-		while((s=br.readLine())!=null)
+		
+		while((br.readLine())!=null)
 		{
 			lineCount++;
 		}

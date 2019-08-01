@@ -1,9 +1,5 @@
 package com.philips.bootcamp.analyzer;
 
-import java.io.BufferedReader;
-import java.io.FileReader;
-import java.io.IOException;
-import java.io.PrintWriter;
 
 /**
  * Hello world!
