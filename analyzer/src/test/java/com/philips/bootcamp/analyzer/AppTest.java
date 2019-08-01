@@ -1,5 +1,4 @@
 package com.philips.bootcamp.analyzer;
-
 import static org.junit.Assert.assertEquals;
 
 import java.io.BufferedReader;
@@ -12,18 +11,8 @@ import org.junit.Test;
 
 import com.philips.bootcamp.utils.Values;
 
-/**
- * Unit test for simple App.
- */
 public class AppTest 
-{
-    /**
-     * Rigorous Test :-)
-     * @throws InterruptedException 
-     * @throws IOException 
-     */
-
-	
+{	
     @Test
     public void testReportGeneration() throws InterruptedException
     {
