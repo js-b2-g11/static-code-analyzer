@@ -6,7 +6,7 @@ import java.util.Date;
 
 import com.philips.bootcamp.utils.InputFile;
 
-public class MergeFile{
+public class Merger{
     public void genAndMergeFile(String filepath) throws IOException, InterruptedException {
         if (InputFile.isValidPath(filepath)) {
 
@@ -27,7 +27,7 @@ public class MergeFile{
             checkstyleEndTime = new Timestamp(new Date().getTime());
             reportCheckstyle.setReportEndTime(checkstyleEndTime);            
             
-            UnifyReport.mergeReports(reportPmd, reportCheckstyle);
+            ReportMerger.mergeReports(reportPmd, reportCheckstyle);
 
         } else {
             System.out.print("Invalid file path specified\n");

@@ -9,7 +9,7 @@ import java.io.PrintWriter;
 
 import com.philips.bootcamp.utils.Values;
 
-public class UnifyReport {
+public class ReportMerger {
 	
     public static int countPmdReportlines=0;
     public static int countCheckstyleReportlines=0;
@@ -24,8 +24,6 @@ public class UnifyReport {
 			  
 			String line1 = br1.readLine(); 
 			String line2 = br2.readLine();                       
-						
-			
 			// 2 loops to copy lines of both reports into a single file 			
 			
 			pw.println("-----------------------------------------------------------------------------------------------");

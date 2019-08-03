@@ -3,6 +3,7 @@ package com.philips.bootcamp.analyzer;
 import java.io.IOException;
 import java.sql.Timestamp;
 
+import com.philips.bootcamp.utils.InputFile;
 import com.philips.bootcamp.utils.Values;
 
 import lombok.Getter;
@@ -30,13 +31,9 @@ public class PmdReportGenerator {
         
 	public void generateReport() throws IOException, InterruptedException{		
 		
-		if(filepath == null || filepath.trim().length() == 0) {
-			try {
-	            throw new Exception("Filepath is not specified enter a valid filepath");
-	        } catch (Exception e) {
-//	            e.printStackTrace();
-	            System.out.print("Filepath not specified\n");
-	        } 
+		int filepathLength = filepath.trim().length();
+		if((filepath == null || filepathLength == 0) && InputFile.isValidPath(filepath)) {
+			System.out.print("Filepath not specified or incorrect filepath\n");
 		}
 		else 
         {

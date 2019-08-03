@@ -14,7 +14,7 @@ public class App
     		if (args.length > 0) {
  
     			String filepath = args[0];
-    			MergeFile vf = new MergeFile();
+    			Merger vf = new Merger();
 				vf.genAndMergeFile(filepath);
 				EmailReport.executeSendEmail();
     			

@@ -58,7 +58,7 @@ public class AppTest
 		pmd.generateReport();
 		cgr.generateReport();
 		
-		UnifyReport.mergeReports(pmd,cgr);	
+		ReportMerger.mergeReports(pmd,cgr);	
 		File f1 = new File("../analyzer/mergedReport.txt");
 		int lineCount=0;
 		FileReader fr = new FileReader(f1);
@@ -69,7 +69,7 @@ public class AppTest
 			lineCount++;
 		}
 		fr.close();
-		assertEquals(lineCount, UnifyReport.countCheckstyleReportlines + UnifyReport.countPmdReportlines + Values.DEFAULT_LINECOUNT);
+		assertEquals(lineCount, ReportMerger.countCheckstyleReportlines + ReportMerger.countPmdReportlines + Values.DEFAULT_LINECOUNT);
 	}
 	
     @Test
@@ -99,7 +99,7 @@ public class AppTest
     	String filepath = "";
     	PmdReportGenerator pmd = new PmdReportGenerator(filepath);
     	pmd.generateReport();
-    	assertEquals("Filepath not specified\n",outContent.toString());
+    	assertEquals("Filepath not specified or incorrect filepath\n",outContent.toString());
     }
     
     @Test
@@ -109,6 +109,6 @@ public class AppTest
     	String filepath = "";
     	CheckstyleReportGenerator crg = new CheckstyleReportGenerator(filepath);
     	crg.generateReport();
-    	assertEquals("Filepath not specified\n",outContent.toString());
+    	assertEquals("Filepath not specified or incorrect filepath\n",outContent.toString());
     }
 }
