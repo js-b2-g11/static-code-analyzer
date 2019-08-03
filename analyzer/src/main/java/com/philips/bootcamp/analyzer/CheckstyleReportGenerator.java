@@ -1,7 +1,15 @@
 package com.philips.bootcamp.analyzer;
 
+import java.io.BufferedReader;
+import java.io.BufferedWriter;
+import java.io.FileWriter;
 import java.io.IOException;
+import java.io.InputStreamReader;
 import java.sql.Timestamp;
+import java.util.List;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
 
 import com.philips.bootcamp.utils.InputFile;
 import com.philips.bootcamp.utils.Values;
@@ -36,9 +44,36 @@ public class CheckstyleReportGenerator {
 		}
 		else {		
 			String executeCheckstyleString = checkstyleJarpath + " -c "+ rulesetCheckstyle + filepath;
-			Process checkstyleProcess = Runtime.getRuntime().exec(cmdString + executeCheckstyleString + " > " + outputFile);
-            checkstyleProcess.waitFor();               
-            System.out.print("Checkstyle report generated.\n");
+			Runtime rt = Runtime.getRuntime();
+			Process checkstyleProcess = rt.exec(cmdString + executeCheckstyleString);
+      
+            
+            JavaFileGetter jfg = new JavaFileGetter();
+            List<String> result = jfg.getFile(filepath);
+            
+            BufferedReader stdInput = new BufferedReader(new 
+       		     InputStreamReader(checkstyleProcess.getInputStream()));
+            String s = null;
+			while ((s = stdInput.readLine()) != null) {
+
+				for(int i=0;i<result.size();i++) {
+
+			    Pattern p = Pattern.compile("^.*\\b("+result.get(i).replace("\\", "\\\\")+")\\b.*$");
+			    Matcher m = p.matcher(s);
+			    if(m.find()) {
+			    	String[] arr = (m.group(1).split(".java"));
+//			    	System.out.println(arr[1]);
+			        BufferedWriter writer = new BufferedWriter(
+                            new FileWriter(filepath+arr[1].replace("\\", "_")+".txt", true)  //Set true for append mode
+                        ); 
+			        writer.newLine();   //Add new line
+			        writer.write(m.group());
+			        writer.close();
+			    	}   	
+				}
+			}
+			System.out.print("Checkstyle report generated.\n");
 		}
 	}
-}
+	}
+	

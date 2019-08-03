@@ -14,9 +14,13 @@ public class App
     		if (args.length > 0) {
  
     			String filepath = args[0];
+    			filepath = filepath.replace("\\", "\\\\");
+    			System.out.println(filepath);
     			Merger vf = new Merger();
+
+    			
 				vf.genAndMergeFile(filepath);
-				EmailReport.executeSendEmail();
+//				EmailReport.executeSendEmail();
     			
     		} else {
     			
