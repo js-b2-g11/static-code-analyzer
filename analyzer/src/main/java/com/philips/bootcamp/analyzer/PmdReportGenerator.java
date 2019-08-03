@@ -1,12 +1,15 @@
 package com.philips.bootcamp.analyzer;
 
 import java.io.BufferedReader;
-import java.io.FileNotFoundException;
-import java.io.FileReader;
+import java.io.BufferedWriter;
+import java.io.FileWriter;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.sql.Timestamp;
-import java.util.Properties;
+import java.util.List;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
 
 import com.philips.bootcamp.utils.FileValidator;
 
@@ -42,21 +45,36 @@ public class PmdReportGenerator extends Tool{
 	@Override
 	public void generateReport() {		
 		if (isValidReport()) {
-			String command[] = new String[] {"pmd.bat", "-d", this.getFilepath(), "-f", "text", 
-					"-R", pmdRuleset, "-r", pmdOutputFile};
-			Runtime rt = Runtime.getRuntime();
-			try {
-				Process p = rt.exec(command);
-		        BufferedReader r = new BufferedReader(new InputStreamReader(p.getInputStream()));
-		        String line;
-		        while (true) {
-		            line = r.readLine();
-		            if (line == null) { break; }
-		            System.out.println(line);
-		        }
-			} catch (IOException e) {
-				e.printStackTrace();
-			}
+			String executePmdString = pmd + filepath + " -f "+ format +" -R " + ruleset;
+            Runtime rt=Runtime.getRuntime();
+         
+            Process pmdProcess = rt.exec(executePmdString);
+            
+            JavaFileGetter jfg = new JavaFileGetter();
+            List<String> result = jfg.getFile(filepath);
+            
+            BufferedReader stdInput = new BufferedReader(new 
+       		     InputStreamReader(pmdProcess.getInputStream()));
+            
+            String s = null;
+			while ((s = stdInput.readLine()) != null) {
+
+				for(int i=0;i<result.size();i++) {
+
+			    Pattern p = Pattern.compile("^.*\\b("+result.get(i).replace("\\", "\\\\")+")\\b.*$");
+			    Matcher m = p.matcher(s);
+			    if(m.find()) {
+			    	String[] arr = (m.group(1).split(".java"));
+			        BufferedWriter writer = new BufferedWriter(
+                            new FileWriter(filepath+arr[1].replace("\\", "_")+".txt", true)  //Set true for append mode
+                        ); 
+			        writer.newLine();   //Add new line
+			        writer.write(m.group());
+			        writer.close();
+			        
+			    	}   	
+				}
+			}			
 			System.out.println("Pmd Report generated");
 		} else {
 			System.out.println("Invalid/Empty file specified!");
@@ -68,6 +86,5 @@ public class PmdReportGenerator extends Tool{
 		if (this.getFilepath().equals(null) || this.getFilepath()=="")
 			return false;
 		return (FileValidator.isValidPath(this.getFilepath()));
-	}
-	
+	}			
 }
