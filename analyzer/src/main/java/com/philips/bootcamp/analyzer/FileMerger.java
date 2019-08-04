@@ -4,11 +4,12 @@ import java.io.IOException;
 import java.sql.Timestamp;
 import java.util.Date;
 
-import com.philips.bootcamp.utils.InputFile;
+import com.philips.bootcamp.utils.FileValidator;
 
-public class MergeFile{
+public class FileMerger{
     public void genAndMergeFile(String filepath) throws IOException, InterruptedException {
-        if (InputFile.isValidPath(filepath)) {
+        
+    	if (FileValidator.isValidPath(filepath)) {
 
             System.out.print("Valid file path detected!\n");
                            		
@@ -25,7 +26,7 @@ public class MergeFile{
 			reportPmd.setReportEndTime(pmdEndTime);
 			
             CheckstyleReportGenerator reportCheckstyle = new CheckstyleReportGenerator(filepath);
-                        
+
             checkstyleStartTime = new Timestamp(new Date().getTime());
             reportCheckstyle.setReportStartTime(checkstyleStartTime);
             reportCheckstyle.generateReport();
@@ -38,7 +39,7 @@ public class MergeFile{
         } else {
 
             System.out.print("Invalid file path specified\n");
-//            System.exit(0);
+
         }
     }
 }

@@ -1,0 +1,90 @@
+-----------------------------------------------------------------------------------------------
+									PMD Report
+-----------------------------------------------------------------------------------------------
+
+
+PMD report start time: 2019-08-01 15:02:45.092
+C:\Users\320053825\Downloads\SampleJavaFiles\FunctionCall.java:1:	All classes, interfaces, enums and annotations must belong to a named package
+C:\Users\320053825\Downloads\SampleJavaFiles\FunctionCall.java:1:	The utility class name 'FunctionCall' doesn't match '[A-Z][a-zA-Z0-9]+(Utils?|Helper)'
+C:\Users\320053825\Downloads\SampleJavaFiles\FunctionCall.java:7:	Parameter 'args' is not assigned and could be declared final
+C:\Users\320053825\Downloads\SampleJavaFiles\FunctionCall.java:27:	Parameter 'param' is not assigned and could be declared final
+C:\Users\320053825\Downloads\SampleJavaFiles\HelloWorld.java:1:	All classes, interfaces, enums and annotations must belong to a named package
+C:\Users\320053825\Downloads\SampleJavaFiles\HelloWorld.java:4:	Parameter 'args' is not assigned and could be declared final
+C:\Users\320053825\Downloads\SampleJavaFiles\MyClass.java:3:	All classes, interfaces, enums and annotations must belong to a named package
+C:\Users\320053825\Downloads\SampleJavaFiles\MyClass.java:3:	Each class should declare at least one constructor
+C:\Users\320053825\Downloads\SampleJavaFiles\MyClass.java:8:	Avoid variables with short names like ip
+C:\Users\320053825\Downloads\SampleJavaFiles\MyClass.java:12:	Local variable 'field' could be declared final
+C:\Users\320053825\Downloads\SampleJavaFiles\MyClass.java:14:	Avoid variables with short names like s
+No. of issues found: 11
+PMD report end time: 2019-08-01 15:02:46.168
+
+-----------------------------------------------------------------------------------------------
+									Checkstyle Report
+-----------------------------------------------------------------------------------------------
+
+
+Checkstyle report start time: 2019-08-01 15:02:46.169
+Starting audit...
+[WARN] C:\Users\320053825\Downloads\SampleJavaFiles\FunctionCall.java:3: 'method def modifier' has incorrect indentation level 4, expected level should be 2. [Indentation]
+[WARN] C:\Users\320053825\Downloads\SampleJavaFiles\FunctionCall.java:3:31: '(' is preceded with whitespace. [MethodParamPad]
+[WARN] C:\Users\320053825\Downloads\SampleJavaFiles\FunctionCall.java:4: 'method def' child has incorrect indentation level 8, expected level should be 4. [Indentation]
+[WARN] C:\Users\320053825\Downloads\SampleJavaFiles\FunctionCall.java:4:1: Line contains a tab character. [FileTabCharacter]
+[WARN] C:\Users\320053825\Downloads\SampleJavaFiles\FunctionCall.java:4:28: '(' is preceded with whitespace. [MethodParamPad]
+[WARN] C:\Users\320053825\Downloads\SampleJavaFiles\FunctionCall.java:5: 'method def rcurly' has incorrect indentation level 4, expected level should be 2. [Indentation]
+[WARN] C:\Users\320053825\Downloads\SampleJavaFiles\FunctionCall.java:7: 'method def modifier' has incorrect indentation level 4, expected level should be 2. [Indentation]
+[WARN] C:\Users\320053825\Downloads\SampleJavaFiles\FunctionCall.java:7:5: Missing a Javadoc comment. [MissingJavadocMethod]
+[WARN] C:\Users\320053825\Downloads\SampleJavaFiles\FunctionCall.java:7:29: '(' is preceded with whitespace. [MethodParamPad]
+[WARN] C:\Users\320053825\Downloads\SampleJavaFiles\FunctionCall.java:8: 'method def' child has incorrect indentation level 8, expected level should be 4. [Indentation]
+[WARN] C:\Users\320053825\Downloads\SampleJavaFiles\FunctionCall.java:8: Distance between variable 'val' declaration and its first usage is 4, but allowed 3.  Consider making that variable final if you still need to store its value in advance (before method calls that might have side effects on the original value). [VariableDeclarationUsageDistance]
+[WARN] C:\Users\320053825\Downloads\SampleJavaFiles\FunctionCall.java:8:1: Line contains a tab character. [FileTabCharacter]
+[WARN] C:\Users\320053825\Downloads\SampleJavaFiles\FunctionCall.java:10: 'method def' child has incorrect indentation level 8, expected level should be 4. [Indentation]
+[WARN] C:\Users\320053825\Downloads\SampleJavaFiles\FunctionCall.java:10:1: Line contains a tab character. [FileTabCharacter]
+[WARN] C:\Users\320053825\Downloads\SampleJavaFiles\FunctionCall.java:10:28: '(' is preceded with whitespace. [MethodParamPad]
+[WARN] C:\Users\320053825\Downloads\SampleJavaFiles\FunctionCall.java:12: 'method def' child has incorrect indentation level 8, expected level should be 4. [Indentation]
+[WARN] C:\Users\320053825\Downloads\SampleJavaFiles\FunctionCall.java:12:1: Line contains a tab character. [FileTabCharacter]
+[WARN] C:\Users\320053825\Downloads\SampleJavaFiles\FunctionCall.java:14: 'method def' child has incorrect indentation level 8, expected level should be 4. [Indentation]
+[WARN] C:\Users\320053825\Downloads\SampleJavaFiles\FunctionCall.java:14:1: Line contains a tab character. [FileTabCharacter]
+[WARN] C:\Users\320053825\Downloads\SampleJavaFiles\FunctionCall.java:14:28: '(' is preceded with whitespace. [MethodParamPad]
+[WARN] C:\Users\320053825\Downloads\SampleJavaFiles\FunctionCall.java:16: 'method def' child has incorrect indentation level 8, expected level should be 4. [Indentation]
+[WARN] C:\Users\320053825\Downloads\SampleJavaFiles\FunctionCall.java:16:1: Line contains a tab character. [FileTabCharacter]
+[WARN] C:\Users\320053825\Downloads\SampleJavaFiles\FunctionCall.java:18: 'method def' child has incorrect indentation level 8, expected level should be 4. [Indentation]
+[WARN] C:\Users\320053825\Downloads\SampleJavaFiles\FunctionCall.java:18:1: Line contains a tab character. [FileTabCharacter]
+[WARN] C:\Users\320053825\Downloads\SampleJavaFiles\FunctionCall.java:18:28: '(' is preceded with whitespace. [MethodParamPad]
+[WARN] C:\Users\320053825\Downloads\SampleJavaFiles\FunctionCall.java:20: 'method def' child has incorrect indentation level 8, expected level should be 4. [Indentation]
+[WARN] C:\Users\320053825\Downloads\SampleJavaFiles\FunctionCall.java:20:1: Line contains a tab character. [FileTabCharacter]
+[WARN] C:\Users\320053825\Downloads\SampleJavaFiles\FunctionCall.java:20:28: '(' is preceded with whitespace. [MethodParamPad]
+[WARN] C:\Users\320053825\Downloads\SampleJavaFiles\FunctionCall.java:22: 'method def' child has incorrect indentation level 8, expected level should be 4. [Indentation]
+[WARN] C:\Users\320053825\Downloads\SampleJavaFiles\FunctionCall.java:22:1: Line contains a tab character. [FileTabCharacter]
+[WARN] C:\Users\320053825\Downloads\SampleJavaFiles\FunctionCall.java:24: 'method def' child has incorrect indentation level 8, expected level should be 4. [Indentation]
+[WARN] C:\Users\320053825\Downloads\SampleJavaFiles\FunctionCall.java:24:1: Line contains a tab character. [FileTabCharacter]
+[WARN] C:\Users\320053825\Downloads\SampleJavaFiles\FunctionCall.java:24:28: '(' is preceded with whitespace. [MethodParamPad]
+[WARN] C:\Users\320053825\Downloads\SampleJavaFiles\FunctionCall.java:25: 'method def rcurly' has incorrect indentation level 4, expected level should be 2. [Indentation]
+[WARN] C:\Users\320053825\Downloads\SampleJavaFiles\FunctionCall.java:27: 'method def modifier' has incorrect indentation level 4, expected level should be 2. [Indentation]
+[WARN] C:\Users\320053825\Downloads\SampleJavaFiles\FunctionCall.java:27:30: '(' is preceded with whitespace. [MethodParamPad]
+[WARN] C:\Users\320053825\Downloads\SampleJavaFiles\FunctionCall.java:28: 'method def' child has incorrect indentation level 8, expected level should be 4. [Indentation]
+[WARN] C:\Users\320053825\Downloads\SampleJavaFiles\FunctionCall.java:28:1: Line contains a tab character. [FileTabCharacter]
+[WARN] C:\Users\320053825\Downloads\SampleJavaFiles\FunctionCall.java:28:28: '(' is preceded with whitespace. [MethodParamPad]
+[WARN] C:\Users\320053825\Downloads\SampleJavaFiles\FunctionCall.java:29: 'method def' child has incorrect indentation level 8, expected level should be 4. [Indentation]
+[WARN] C:\Users\320053825\Downloads\SampleJavaFiles\FunctionCall.java:29:1: Line contains a tab character. [FileTabCharacter]
+[WARN] C:\Users\320053825\Downloads\SampleJavaFiles\FunctionCall.java:30: 'method def rcurly' has incorrect indentation level 4, expected level should be 2. [Indentation]
+[WARN] C:\Users\320053825\Downloads\SampleJavaFiles\HelloWorld.java:4: 'method def modifier' has incorrect indentation level 4, expected level should be 2. [Indentation]
+[WARN] C:\Users\320053825\Downloads\SampleJavaFiles\HelloWorld.java:4:29: '(' is preceded with whitespace. [MethodParamPad]
+[WARN] C:\Users\320053825\Downloads\SampleJavaFiles\HelloWorld.java:5: 'method def' child has incorrect indentation level 8, expected level should be 4. [Indentation]
+[WARN] C:\Users\320053825\Downloads\SampleJavaFiles\HelloWorld.java:5:1: Line contains a tab character. [FileTabCharacter]
+[WARN] C:\Users\320053825\Downloads\SampleJavaFiles\HelloWorld.java:5:28: '(' is preceded with whitespace. [MethodParamPad]
+[WARN] C:\Users\320053825\Downloads\SampleJavaFiles\HelloWorld.java:6: 'method def rcurly' has incorrect indentation level 4, expected level should be 2. [Indentation]
+[WARN] C:\Users\320053825\Downloads\SampleJavaFiles\MyClass.java:1: Using the '.*' form of import should be avoided - java.io.*. [AvoidStarImport]
+[WARN] C:\Users\320053825\Downloads\SampleJavaFiles\MyClass.java:6: 'member def modifier' has incorrect indentation level 4, expected level should be 2. [Indentation]
+[WARN] C:\Users\320053825\Downloads\SampleJavaFiles\MyClass.java:8: 'member def modifier' has incorrect indentation level 4, expected level should be 2. [Indentation]
+[WARN] C:\Users\320053825\Downloads\SampleJavaFiles\MyClass.java:10: 'method def modifier' has incorrect indentation level 4, expected level should be 2. [Indentation]
+[WARN] C:\Users\320053825\Downloads\SampleJavaFiles\MyClass.java:10:5: Missing a Javadoc comment. [MissingJavadocMethod]
+[WARN] C:\Users\320053825\Downloads\SampleJavaFiles\MyClass.java:12: 'method def' child has incorrect indentation level 8, expected level should be 4. [Indentation]
+[WARN] C:\Users\320053825\Downloads\SampleJavaFiles\MyClass.java:14: 'method def' child has incorrect indentation level 8, expected level should be 4. [Indentation]
+[WARN] C:\Users\320053825\Downloads\SampleJavaFiles\MyClass.java:15: 'for' has incorrect indentation level 8, expected level should be 4. [Indentation]
+[WARN] C:\Users\320053825\Downloads\SampleJavaFiles\MyClass.java:16: 'for' child has incorrect indentation level 12, expected level should be 6. [Indentation]
+[WARN] C:\Users\320053825\Downloads\SampleJavaFiles\MyClass.java:17: 'for rcurly' has incorrect indentation level 8, expected level should be 4. [Indentation]
+[WARN] C:\Users\320053825\Downloads\SampleJavaFiles\MyClass.java:19: 'method def' child has incorrect indentation level 8, expected level should be 4. [Indentation]
+[WARN] C:\Users\320053825\Downloads\SampleJavaFiles\MyClass.java:21: 'method def rcurly' has incorrect indentation level 4, expected level should be 2. [Indentation]
+Audit done.
+No. of issues found: 62
+Checkstyle report end time: 2019-08-01 15:02:46.977

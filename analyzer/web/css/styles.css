@@ -1,0 +1,16 @@
+#html {
+    height: 100%;
+    width: 100%;
+}
+
+body {
+    margin: 10px;
+}
+.pageHeading h1 {
+    text-align: center;
+}
+
+.path {
+    text-align: center;
+    margin: 20px;
+}
