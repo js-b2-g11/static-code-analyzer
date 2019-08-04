@@ -8,22 +8,41 @@
             src="https://code.jquery.com/jquery-3.4.1.js"
             integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
             crossorigin="anonymous"></script>      
-        <link rel="stylesheet" href="/css/styles.css"> 
+        <link rel="stylesheet" href="/analyzer/web/css/styles.css"> 
     </head>
 
     <body>
-        <h1>Static Code Analyzer</h1>
+        <div class='pageHeading'>
+            <h1>Static Code Analyzer</h1>
+        </div>        
 
-        <?php
-            $files = scandir('./');
-            sort($files); // this does the sorting
-            foreach($files as $file){
-                $absolute_path = realpath($file);                
-                print '<a href="/page.php?filePath='.$absolute_path.'">'.$file.'</a><br>';
-            }            
-        ?>
+        <div class='path'>
+            <h6>
+                <?php
+                    $ini_array = parse_ini_file("./../../sca.properties");
+                    print_r('Target: '.$ini_array['path']);
+                ?>
+            </h6>
+        </div>
 
-        <div id="piechart"></div>       
+        <div class='mainContainer'>
+            <div class='fileListContainer'>
+                <ul class="list-group">                
+                    <?php
+                        $files = scandir('./');
+                        sort($files); // this does the sorting
+                        foreach($files as $file){
+                            $absolute_path = realpath($file);                
+                            print '<a href="/analyzer/web/page.php?filePath='.$absolute_path.'"'.
+                            'class="list-group-item">'.$file.
+                            '</a>';
+                        }            
+                    ?>  
+                </ul>
+            </div>       
+
+            <div id="piechart"></div>       
+        </div>        
         
         <script type="text/javascript">
             // Load google charts
