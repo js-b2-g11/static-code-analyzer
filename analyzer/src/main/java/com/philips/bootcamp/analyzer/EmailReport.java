@@ -1,5 +1,7 @@
 package com.philips.bootcamp.analyzer;
 
+import java.io.File;
+import java.io.FileReader;
 import java.util.Properties;
 import javax.activation.DataHandler;
 import javax.activation.DataSource;
@@ -23,8 +25,7 @@ public class EmailReport {
 	static MimeMessage generateMailMessage;
 	
 	final static String USER_EMAIL = "projectbootcamp6@gmail.com";
-	final static String USER_PASSWORD = "$qwerty123";		
-	final static String RECIPIENT_EMAIL = "projectfinal316@gmail.com";
+	final static String USER_PASSWORD = "$qwerty123";			
  
 	public static void executeSendEmail() throws AddressException, MessagingException {
 		generateAndSendEmail();
@@ -43,7 +44,9 @@ public class EmailReport {
 			generateMailMessage = new MimeMessage(getMailSession);
 			
 			// Add recipients for mail						
-			generateMailMessage.addRecipient(Message.RecipientType.TO, new InternetAddress(RECIPIENT_EMAIL));			
+			Properties p = new Properties();
+			p.load(new FileReader(new File("./../sca.properties")));
+			generateMailMessage.addRecipient(Message.RecipientType.TO, new InternetAddress(p.getProperty("email")));			
 			
 			generateMailMessage.setSubject("Code report");
 			
