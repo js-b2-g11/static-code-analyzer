@@ -5,6 +5,7 @@ For /F "tokens=1* delims==" %%A IN (sca.properties) DO (
 cd analyzer
 call mvnw clean compile assembly:single
 call mvnw test
-cd target
-java -jar analyzer-0.0.1-SNAPSHOT-jar-with-dependencies.jar %myPath%
+java -jar target/analyzer-0.0.1-SNAPSHOT-jar-with-dependencies.jar %myPath%
+cd ..
+php -S localhost:8080
 PAUSE

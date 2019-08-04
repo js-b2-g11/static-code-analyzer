@@ -14,3 +14,39 @@ body {
     text-align: center;
     margin: 20px;
 }
+
+.mainContainer {
+    width: 100%;
+    height: 100%;
+}
+
+*, ::after, ::before {
+    box-sizing: inherit;
+}
+
+.list-group-item {
+    position: relative;
+    display: block;
+    padding: .75rem 1.25rem;
+    margin-bottom: -1px;
+    background-color: #fff;
+    border: 1px solid rgba(0,0,0,.125);
+}
+
+.list-group {
+    max-width: 400px;
+}
+
+.fileListContainer {
+    width: 40%;
+    float:left;
+}
+
+#piechart {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width:60%;
+    height: 100%;
+    float:right;
+}

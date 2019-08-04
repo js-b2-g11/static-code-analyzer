@@ -4,7 +4,7 @@
 
 
 PMD report start time: 2019-08-01 15:02:45.092
-C:\Users\320053825\Downloads\SampleJavaFiles\FunctionCall.java:1:	All classes, interfaces, enums and annotations must belong to a named package
+C:\Users\320053825\Downloads\SampleJavaFiles\FunctionCall.java:1: All classes, interfaces, enums and annotations must belong to a named package
 C:\Users\320053825\Downloads\SampleJavaFiles\FunctionCall.java:1:	The utility class name 'FunctionCall' doesn't match '[A-Z][a-zA-Z0-9]+(Utils?|Helper)'
 C:\Users\320053825\Downloads\SampleJavaFiles\FunctionCall.java:7:	Parameter 'args' is not assigned and could be declared final
 C:\Users\320053825\Downloads\SampleJavaFiles\FunctionCall.java:27:	Parameter 'param' is not assigned and could be declared final
