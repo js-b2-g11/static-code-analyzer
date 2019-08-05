@@ -106,9 +106,9 @@ public class AppTest
            String[] args = {};
            App.main(args);
            assertEquals("No file path specified.\n", outContent.toString());
-    }
+    } */
     
-//    @Test
+    @Test
     public void noFilepathforPmd() throws IOException, InterruptedException {
     	final ByteArrayOutputStream outContent = new ByteArrayOutputStream();
     	System.setOut(new PrintStream(outContent));
@@ -116,8 +116,8 @@ public class AppTest
     	PmdReportGenerator pmd = new PmdReportGenerator(filepath, 
     			"category/java/codestyle.xml", "reportPmd.txt");
     	pmd.generateReport();
-    	assertEquals("Filepath not specified\n",outContent.toString());
-    } */
+    	assertEquals("Invalid/Empty file specified!"+System.getProperty("line.separator"), outContent.toString());
+    } 
     
     @Test
     public void noFilepathforCheckstyle() throws IOException, InterruptedException {
@@ -129,4 +129,27 @@ public class AppTest
     	crg.generateCompleteReport();
     	assertEquals("Invalid/Empty file specified!"+System.getProperty("line.separator"), outContent.toString());
     }
+    
+    @Test
+    public void invalidFilepathforPmd() throws IOException, InterruptedException {
+    	final ByteArrayOutputStream outContent = new ByteArrayOutputStream();
+    	System.setOut(new PrintStream(outContent));
+    	String filepath = "/nothelloworld";
+    	PmdReportGenerator pmd = new PmdReportGenerator(filepath, 
+    			"category/java/codestyle.xml", "reportPmd.txt");
+    	pmd.generateReport();
+    	assertEquals("Invalid/Empty file specified!"+System.getProperty("line.separator"), outContent.toString());
+    } 
+    
+    @Test
+    public void invalidFilepathforCheckstyle() throws IOException, InterruptedException {
+    	final ByteArrayOutputStream outContent = new ByteArrayOutputStream();
+    	System.setOut(new PrintStream(outContent));
+    	String filepath = "/nothelloworld";
+    	CheckstyleReportGenerator crg = new CheckstyleReportGenerator(filepath, "C:/Checkstyle/checkstyle-8.22-all.jar", 
+    			"/google_checks.xml", "reportCheckStyle.txt");
+    	crg.generateCompleteReport();
+    	assertEquals("Invalid/Empty file specified!"+System.getProperty("line.separator"), outContent.toString());
+    }
+    
 }
