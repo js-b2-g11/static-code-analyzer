@@ -1,16 +1,25 @@
 package com.philips.bootcamp.analyzer;
-import static org.junit.Assert.assertEquals;
 
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertTrue;
+
+import java.awt.image.BufferedImage;
 import java.io.BufferedReader;
 import java.io.ByteArrayOutputStream;
 import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
 import java.io.PrintStream;
+import java.nio.Buffer;
+
+import org.junit.Ignore;
 import org.junit.Test;
 
 import com.philips.bootcamp.utils.Values;
 
+/**
+ * Unit test for simple App.
+ */
 public class AppTest 
 {
     /**
@@ -65,18 +74,18 @@ public class AppTest
 		pmd.generateReport();
 		cgr.generateReport();
 		
-		ReportMerger.mergeReports(pmd,cgr);	
+		UnifyReport.mergeReports(pmd,cgr);	
 		File f1 = new File("../analyzer/mergedReport.txt");
 		int lineCount=0;
 		FileReader fr = new FileReader(f1);
 		BufferedReader br = new BufferedReader(fr);
-		
-		while((br.readLine())!=null)
+		String s;
+		while((s=br.readLine())!=null)
 		{
 			lineCount++;
 		}
 		fr.close();
-		assertEquals(lineCount, ReportMerger.countCheckstyleReportlines + ReportMerger.countPmdReportlines + Values.DEFAULT_LINECOUNT);
+		assertEquals(lineCount, UnifyReport.countCheckstyleReportlines + UnifyReport.countPmdReportlines + Values.DEFAULT_LINECOUNT);
 	}
 	
 //    @Test
@@ -97,9 +106,9 @@ public class AppTest
            String[] args = {};
            App.main(args);
            assertEquals("No file path specified.\n", outContent.toString());
-    }
+    } */
     
-//    @Test
+    @Test
     public void noFilepathforPmd() throws IOException, InterruptedException {
     	final ByteArrayOutputStream outContent = new ByteArrayOutputStream();
     	System.setOut(new PrintStream(outContent));
@@ -107,8 +116,8 @@ public class AppTest
     	PmdReportGenerator pmd = new PmdReportGenerator(filepath, 
     			"category/java/codestyle.xml", "reportPmd.txt");
     	pmd.generateReport();
-    	assertEquals("Filepath not specified or incorrect filepath\n",outContent.toString());
-    }
+    	assertEquals("Invalid/Empty file specified!"+System.getProperty("line.separator"), outContent.toString());
+    } 
     
     @Test
     public void noFilepathforCheckstyle() throws IOException, InterruptedException {
@@ -120,4 +129,27 @@ public class AppTest
     	crg.generateCompleteReport();
     	assertEquals("Invalid/Empty file specified!"+System.getProperty("line.separator"), outContent.toString());
     }
+    
+    @Test
+    public void invalidFilepathforPmd() throws IOException, InterruptedException {
+    	final ByteArrayOutputStream outContent = new ByteArrayOutputStream();
+    	System.setOut(new PrintStream(outContent));
+    	String filepath = "/nothelloworld";
+    	PmdReportGenerator pmd = new PmdReportGenerator(filepath, 
+    			"category/java/codestyle.xml", "reportPmd.txt");
+    	pmd.generateReport();
+    	assertEquals("Invalid/Empty file specified!"+System.getProperty("line.separator"), outContent.toString());
+    } 
+    
+    @Test
+    public void invalidFilepathforCheckstyle() throws IOException, InterruptedException {
+    	final ByteArrayOutputStream outContent = new ByteArrayOutputStream();
+    	System.setOut(new PrintStream(outContent));
+    	String filepath = "/nothelloworld";
+    	CheckstyleReportGenerator crg = new CheckstyleReportGenerator(filepath, "C:/Checkstyle/checkstyle-8.22-all.jar", 
+    			"/google_checks.xml", "reportCheckStyle.txt");
+    	crg.generateCompleteReport();
+    	assertEquals("Invalid/Empty file specified!"+System.getProperty("line.separator"), outContent.toString());
+    }
+    
 }
