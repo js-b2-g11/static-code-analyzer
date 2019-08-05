@@ -43,9 +43,8 @@ public class CheckstyleReportGenerator extends Tool{
 				checkstyleRuleset, checkstyleOutputFile);						
 		return report;
 	}
-
-	@Override
-	public void generateReport() {				
+	
+	public void generateCompleteReport() {				
 		if (isValidReport()) {
 			String command[] = new String[] {"cmd", "/c", "java", "-jar", checkstylePath, "-c", 
 					checkstyleRuleset, this.getFilepath(), ">", checkstyleOutputFile};
@@ -62,7 +61,7 @@ public class CheckstyleReportGenerator extends Tool{
 			} catch (IOException e) {
 				e.printStackTrace();
 			}
-			System.out.println("Checkstyle Report generated");
+			System.out.println("Checkstyle Report(Complete) generated");
 		} else {
 			System.out.println("Invalid/Empty file specified!");
 		}
@@ -79,6 +78,12 @@ public class CheckstyleReportGenerator extends Tool{
 		String propertiesFile = "./../sca.properties";				
 		CheckstyleReportGenerator reportCheckstyle = CheckstyleReportGenerator.getCheckstyleReportObject(propertiesFile);
 		reportCheckstyle.generateReport();
+	}
+
+	@Override
+	public void generateReport() {
+		// TODO Auto-generated method stub
+		
 	}
 	
 }
