@@ -45,14 +45,12 @@ public class CheckstyleReportGenerator {
 		else {		
 			String executeCheckstyleString = checkstyleJarpath + " -c "+ rulesetCheckstyle + filepath;
 			Runtime rt = Runtime.getRuntime();
-			Process checkstyleProcess = rt.exec(cmdString + executeCheckstyleString);
-      
+			Process checkstyleProcess = rt.exec(cmdString + executeCheckstyleString);      
             
             JavaFileGetter jfg = new JavaFileGetter();
             List<String> result = jfg.getFile(filepath);
             
-            BufferedReader stdInput = new BufferedReader(new 
-       		     InputStreamReader(checkstyleProcess.getInputStream()));
+            BufferedReader stdInput = new BufferedReader(new InputStreamReader(checkstyleProcess.getInputStream()));
             String s = null;
 			while ((s = stdInput.readLine()) != null) {
 
@@ -64,8 +62,9 @@ public class CheckstyleReportGenerator {
 			    	String[] arr = (m.group(1).split(".java"));
 //			    	System.out.println(arr[1]);
 			        BufferedWriter writer = new BufferedWriter(
-                            new FileWriter(filepath+arr[1].replace("\\", "_")+".txt", true)  //Set true for append mode
+                            new FileWriter(filepath+"\\main"+arr[1].replace("\\", "_")+".txt", true)  //Set true for append mode
                         ); 
+			        
 			        writer.newLine();   //Add new line
 			        writer.write(m.group());
 			        writer.close();
