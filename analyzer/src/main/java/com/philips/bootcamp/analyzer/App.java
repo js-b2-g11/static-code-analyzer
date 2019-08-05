@@ -1,10 +1,5 @@
 package com.philips.bootcamp.analyzer;
 
-
-/**
- * Hello world!
- *
- */
 public class App 
 {
     public static void main( String[] args ) throws InterruptedException
@@ -17,9 +12,12 @@ public class App
     			filepath = filepath.replace("\\", "\\\\");
     			System.out.println(filepath);
     			Merger vf = new Merger();
-
+    			IssueCounter Issues = new IssueCounter();
+    			
     			
 				vf.genAndMergeFile(filepath);
+				
+				Issues.getIssueCount(filepath);
 //				EmailReport.executeSendEmail();
     			
     		} else {

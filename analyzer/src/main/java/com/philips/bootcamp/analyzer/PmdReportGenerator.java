@@ -66,7 +66,7 @@ public class PmdReportGenerator extends Tool{
 			    if(m.find()) {
 			    	String[] arr = (m.group(1).split(".java"));
 			        BufferedWriter writer = new BufferedWriter(
-                            new FileWriter(filepath+arr[1].replace("\\", "_")+".txt", true)  //Set true for append mode
+                            new FileWriter(filepath+"\\main"+arr[1].replace("\\", "_")+".txt", true)  //Set true for append mode
                         ); 
 			        writer.newLine();   //Add new line
 			        writer.write(m.group());
