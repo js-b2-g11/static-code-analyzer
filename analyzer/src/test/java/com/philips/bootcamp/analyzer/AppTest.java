@@ -28,7 +28,7 @@ public class AppTest
      * @throws IOException 
      */
 
-	
+/*	
 //    @Test
     public void testReportGeneration() throws InterruptedException
     {
@@ -113,18 +113,20 @@ public class AppTest
     	final ByteArrayOutputStream outContent = new ByteArrayOutputStream();
     	System.setOut(new PrintStream(outContent));
     	String filepath = "";
-    	PmdReportGenerator pmd = new PmdReportGenerator(filepath);
+    	PmdReportGenerator pmd = new PmdReportGenerator(filepath, 
+    			"category/java/codestyle.xml", "reportPmd.txt");
     	pmd.generateReport();
     	assertEquals("Filepath not specified\n",outContent.toString());
-    }
+    } */
     
     @Test
     public void noFilepathforCheckstyle() throws IOException, InterruptedException {
     	final ByteArrayOutputStream outContent = new ByteArrayOutputStream();
     	System.setOut(new PrintStream(outContent));
     	String filepath = "";
-    	CheckstyleReportGenerator crg = new CheckstyleReportGenerator(filepath);
-    	crg.generateReport();
+    	CheckstyleReportGenerator crg = new CheckstyleReportGenerator(filepath, "C:/Checkstyle/checkstyle-8.22-all.jar", 
+    			"/google_checks.xml", "reportCheckStyle.txt");
+    	crg.generateCompleteReport();
     	assertEquals("Invalid/Empty file specified!"+System.getProperty("line.separator"), outContent.toString());
     }
 }
