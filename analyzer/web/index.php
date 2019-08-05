@@ -20,7 +20,8 @@
             <h6>
                 <?php
                     $ini_array = parse_ini_file("./../../sca.properties");
-                    print_r('Target: '.$ini_array['path']);
+                    $filepath = $ini_array['path'];
+                    print_r('Target: '.$filepath);                    
                 ?>
             </h6>
         </div>
@@ -29,13 +30,20 @@
             <div class='fileListContainer'>
                 <ul class="list-group">                
                     <?php
-                        $files = scandir('./');
-                        sort($files); // this does the sorting
+                        $scannedDir = scandir('./');
+                        $files = array_diff($scannedDir, array('.', '..'));
+                        sort($files);                         
+                        if (count($files) == 0) {
+                            echo "Target directory is empty or unspecified";
+                            exit;
+                        }
                         foreach($files as $file){
-                            $absolute_path = realpath($file);                
-                            print '<a href="/analyzer/web/page.php?filePath='.$absolute_path.'"'.
-                            'class="list-group-item">'.$file.
-                            '</a>';
+                            if (strtolower(substr($file, strrpos($file, '.') + 1)) == 'txt') {
+                                $absolute_path = realpath($file);                
+                                print '<a href="/analyzer/web/page.php?filePath='.$absolute_path.'"'.
+                                'class="list-group-item">'.$file.
+                                '</a>';
+                            }                                                        
                         }            
                     ?>  
                 </ul>
