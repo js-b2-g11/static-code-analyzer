@@ -22,18 +22,21 @@ public class PmdReportGenerator extends Tool{
 	private String pmdOutputFile;
 	private Timestamp reportStartTime;
 	private Timestamp reportEndTime;
-
-	public PmdReportGenerator(String filepath) {
-		super(filepath.trim());		
+	
+	public PmdReportGenerator(String filepath, String pmdRuleset, String pmdOutputFile) {
+		super(filepath);
+		this.pmdRuleset = pmdRuleset;
+		this.pmdOutputFile = pmdOutputFile;		
 	}
+	
 	
 	public static PmdReportGenerator getPmdReportObject (String configFile) throws FileNotFoundException, IOException {
 		Properties p = new Properties();
 		p.load(new FileReader(configFile));		
 		String filepath = p.getProperty("path");
-		PmdReportGenerator report = new PmdReportGenerator(filepath);		
-		report.setPmdRuleset(p.getProperty("pmdRuleset"));
-		report.setPmdOutputFile(p.getProperty("pmdOutputFile"));			
+		String pmdRuleset = p.getProperty("pmdRuleset");
+		String pmdOutPutFile = p.getProperty("pmdOutputFile");
+		PmdReportGenerator report = new PmdReportGenerator(filepath, pmdRuleset, pmdOutPutFile);						
 		return report;
 	}
 
