@@ -16,7 +16,7 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 
 public class Parser {
 	
-	public static void main(String[] args) throws IOException {
+	public void parseCheckstyleIssues(String[] args) throws IOException {
 		// TODO Auto-generated method stub
 		FileReader input = new FileReader("./reportCheckstyle.txt");
 		BufferedReader bufRead = new BufferedReader(input);
