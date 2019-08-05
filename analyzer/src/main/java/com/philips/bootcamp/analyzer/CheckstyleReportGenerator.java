@@ -22,20 +22,25 @@ public class CheckstyleReportGenerator extends Tool{
 	private String checkstyleRuleset;
 	private String checkstyleOutputFile;
 	private Timestamp reportStartTime;
-	private Timestamp reportEndTime;
+	private Timestamp reportEndTime;	
 	
-	public CheckstyleReportGenerator(String filepath) {
+	public CheckstyleReportGenerator(String filepath, String checkstylePath, String checkstyleRuleset,
+			String checkstyleOutputFile) {
 		super(filepath.trim());
-	}
+		this.checkstylePath = checkstylePath;
+		this.checkstyleRuleset = checkstyleRuleset;
+		this.checkstyleOutputFile = checkstyleOutputFile;		
+	}		
 	
 	public static CheckstyleReportGenerator getCheckstyleReportObject (String configFile) throws FileNotFoundException, IOException {
 		Properties p = new Properties();
 		p.load(new FileReader(configFile));		
 		String filepath = p.getProperty("path");
-		CheckstyleReportGenerator report = new CheckstyleReportGenerator(filepath);		
-		report.setCheckstylePath(p.getProperty("checkstylePath"));
-		report.setCheckstyleRuleset(p.getProperty("checkstyleRuleset"));
-		report.setCheckstyleOutputFile(p.getProperty("checkstyleOutputFile"));		
+		String checkstylePath = p.getProperty("checkstylePath");
+		String checkstyleRuleset = p.getProperty("checkstyleRuleset");
+		String checkstyleOutputFile = p.getProperty("checkstyleOutputFile");
+		CheckstyleReportGenerator report = new CheckstyleReportGenerator(filepath, checkstylePath, 
+				checkstyleRuleset, checkstyleOutputFile);						
 		return report;
 	}
 
@@ -70,12 +75,11 @@ public class CheckstyleReportGenerator extends Tool{
 		return (FileValidator.isValidPath(this.getFilepath()));
 	}
 	
-//	public static void main(String args[]) throws FileNotFoundException, IOException {
-//		String propertiesFile = "./../sca.properties";		
-//		CheckstyleReportGenerator reportCheckstyle = CheckstyleReportGenerator.getCheckstyleReportObject(propertiesFile);
-//		CheckstyleReportGenerator reportCheckstyle = new CheckstyleReportGenerator("akdshflkjadslf");
-//		reportCheckstyle.generateReport();
-//	}
+	public static void main(String args[]) throws FileNotFoundException, IOException {
+		String propertiesFile = "./../sca.properties";				
+		CheckstyleReportGenerator reportCheckstyle = CheckstyleReportGenerator.getCheckstyleReportObject(propertiesFile);
+		reportCheckstyle.generateReport();
+	}
 	
 }
 
