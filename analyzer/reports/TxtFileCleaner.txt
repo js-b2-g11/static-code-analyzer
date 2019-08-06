@@ -1,0 +1,62 @@
+
+C:\Users\320053825\Documents\static-code-analyzer\analyzer\src\main\java\com\philips\bootcamp\analyzer\TxtFileCleaner.java:6:	Each class should declare at least one constructor
+C:\Users\320053825\Documents\static-code-analyzer\analyzer\src\main\java\com\philips\bootcamp\analyzer\TxtFileCleaner.java:8:	Parameter 'ext' is not assigned and could be declared final
+C:\Users\320053825\Documents\static-code-analyzer\analyzer\src\main\java\com\philips\bootcamp\analyzer\TxtFileCleaner.java:8:	Parameter 'filedir' is not assigned and could be declared final
+C:\Users\320053825\Documents\static-code-analyzer\analyzer\src\main\java\com\philips\bootcamp\analyzer\TxtFileCleaner.java:10:	Local variable 'filter' could be declared final
+C:\Users\320053825\Documents\static-code-analyzer\analyzer\src\main\java\com\philips\bootcamp\analyzer\TxtFileCleaner.java:11:	Local variable 'dir' could be declared final
+C:\Users\320053825\Documents\static-code-analyzer\analyzer\src\main\java\com\philips\bootcamp\analyzer\TxtFileCleaner.java:13:	Local variable 'list' could be declared final
+C:\Users\320053825\Documents\static-code-analyzer\analyzer\src\main\java\com\philips\bootcamp\analyzer\TxtFileCleaner.java:15:	Avoid using if statements without curly braces
+C:\Users\320053825\Documents\static-code-analyzer\analyzer\src\main\java\com\philips\bootcamp\analyzer\TxtFileCleaner.java:16:	This statement should have braces
+C:\Users\320053825\Documents\static-code-analyzer\analyzer\src\main\java\com\philips\bootcamp\analyzer\TxtFileCleaner.java:20:	Local variable 'file' could be declared final
+C:\Users\320053825\Documents\static-code-analyzer\analyzer\src\main\java\com\philips\bootcamp\analyzer\TxtFileCleaner.java:21:	Local variable 'temp' could be declared final
+C:\Users\320053825\Documents\static-code-analyzer\analyzer\src\main\java\com\philips\bootcamp\analyzer\TxtFileCleaner.java:32:	Parameter 'ext' is not assigned and could be declared final
+C:\Users\320053825\Documents\static-code-analyzer\analyzer\src\main\java\com\philips\bootcamp\analyzer\TxtFileCleaner.java:36:	Parameter 'dir' is not assigned and could be declared final
+C:\Users\320053825\Documents\static-code-analyzer\analyzer\src\main\java\com\philips\bootcamp\analyzer\TxtFileCleaner.java:36:	Parameter 'name' is not assigned and could be declared final
+C:\Users\320053825\Documents\static-code-analyzer\analyzer\src\main\java\com\philips\bootcamp\analyzer\TxtFileCleaner.java:37:	Useless parentheses.
+[WARN] C:\Users\320053825\Documents\static-code-analyzer\analyzer\src\main\java\com\philips\bootcamp\analyzer\TxtFileCleaner.java:7:1: Line contains a tab character. [FileTabCharacter]
+[WARN] C:\Users\320053825\Documents\static-code-analyzer\analyzer\src\main\java\com\philips\bootcamp\analyzer\TxtFileCleaner.java:8: 'method def modifier' has incorrect indentation level 8, expected level should be 2. [Indentation]
+[WARN] C:\Users\320053825\Documents\static-code-analyzer\analyzer\src\main\java\com\philips\bootcamp\analyzer\TxtFileCleaner.java:8:1: Line contains a tab character. [FileTabCharacter]
+[WARN] C:\Users\320053825\Documents\static-code-analyzer\analyzer\src\main\java\com\philips\bootcamp\analyzer\TxtFileCleaner.java:8:9: Missing a Javadoc comment. [MissingJavadocMethod]
+[WARN] C:\Users\320053825\Documents\static-code-analyzer\analyzer\src\main\java\com\philips\bootcamp\analyzer\TxtFileCleaner.java:10: 'method def' child has incorrect indentation level 16, expected level should be 4. [Indentation]
+[WARN] C:\Users\320053825\Documents\static-code-analyzer\analyzer\src\main\java\com\philips\bootcamp\analyzer\TxtFileCleaner.java:10:1: Line contains a tab character. [FileTabCharacter]
+[WARN] C:\Users\320053825\Documents\static-code-analyzer\analyzer\src\main\java\com\philips\bootcamp\analyzer\TxtFileCleaner.java:11: 'method def' child has incorrect indentation level 16, expected level should be 4. [Indentation]
+[WARN] C:\Users\320053825\Documents\static-code-analyzer\analyzer\src\main\java\com\philips\bootcamp\analyzer\TxtFileCleaner.java:11:1: Line contains a tab character. [FileTabCharacter]
+[WARN] C:\Users\320053825\Documents\static-code-analyzer\analyzer\src\main\java\com\philips\bootcamp\analyzer\TxtFileCleaner.java:13: 'method def' child has incorrect indentation level 16, expected level should be 4. [Indentation]
+[WARN] C:\Users\320053825\Documents\static-code-analyzer\analyzer\src\main\java\com\philips\bootcamp\analyzer\TxtFileCleaner.java:13:1: Line contains a tab character. [FileTabCharacter]
+[WARN] C:\Users\320053825\Documents\static-code-analyzer\analyzer\src\main\java\com\philips\bootcamp\analyzer\TxtFileCleaner.java:15: 'if' construct must use '{}'s. [NeedBraces]
+[WARN] C:\Users\320053825\Documents\static-code-analyzer\analyzer\src\main\java\com\philips\bootcamp\analyzer\TxtFileCleaner.java:15: 'if' has incorrect indentation level 16, expected level should be 4. [Indentation]
+[WARN] C:\Users\320053825\Documents\static-code-analyzer\analyzer\src\main\java\com\philips\bootcamp\analyzer\TxtFileCleaner.java:15:1: Line contains a tab character. [FileTabCharacter]
+[WARN] C:\Users\320053825\Documents\static-code-analyzer\analyzer\src\main\java\com\philips\bootcamp\analyzer\TxtFileCleaner.java:16:1: Line contains a tab character. [FileTabCharacter]
+[WARN] C:\Users\320053825\Documents\static-code-analyzer\analyzer\src\main\java\com\philips\bootcamp\analyzer\TxtFileCleaner.java:18: 'method def' child has incorrect indentation level 16, expected level should be 4. [Indentation]
+[WARN] C:\Users\320053825\Documents\static-code-analyzer\analyzer\src\main\java\com\philips\bootcamp\analyzer\TxtFileCleaner.java:18:1: Line contains a tab character. [FileTabCharacter]
+[WARN] C:\Users\320053825\Documents\static-code-analyzer\analyzer\src\main\java\com\philips\bootcamp\analyzer\TxtFileCleaner.java:20: 'for' has incorrect indentation level 16, expected level should be 4. [Indentation]
+[WARN] C:\Users\320053825\Documents\static-code-analyzer\analyzer\src\main\java\com\philips\bootcamp\analyzer\TxtFileCleaner.java:20:1: Line contains a tab character. [FileTabCharacter]
+[WARN] C:\Users\320053825\Documents\static-code-analyzer\analyzer\src\main\java\com\philips\bootcamp\analyzer\TxtFileCleaner.java:21: 'for' child has incorrect indentation level 24, expected level should be 6. [Indentation]
+[WARN] C:\Users\320053825\Documents\static-code-analyzer\analyzer\src\main\java\com\philips\bootcamp\analyzer\TxtFileCleaner.java:21: Line is longer than 100 characters (found 111). [LineLength]
+[WARN] C:\Users\320053825\Documents\static-code-analyzer\analyzer\src\main\java\com\philips\bootcamp\analyzer\TxtFileCleaner.java:21:1: Line contains a tab character. [FileTabCharacter]
+[WARN] C:\Users\320053825\Documents\static-code-analyzer\analyzer\src\main\java\com\philips\bootcamp\analyzer\TxtFileCleaner.java:22: 'for' child has incorrect indentation level 24, expected level should be 6. [Indentation]
+[WARN] C:\Users\320053825\Documents\static-code-analyzer\analyzer\src\main\java\com\philips\bootcamp\analyzer\TxtFileCleaner.java:22:1: Line contains a tab character. [FileTabCharacter]
+[WARN] C:\Users\320053825\Documents\static-code-analyzer\analyzer\src\main\java\com\philips\bootcamp\analyzer\TxtFileCleaner.java:23: 'for' child has incorrect indentation level 24, expected level should be 6. [Indentation]
+[WARN] C:\Users\320053825\Documents\static-code-analyzer\analyzer\src\main\java\com\philips\bootcamp\analyzer\TxtFileCleaner.java:23:1: Line contains a tab character. [FileTabCharacter]
+[WARN] C:\Users\320053825\Documents\static-code-analyzer\analyzer\src\main\java\com\philips\bootcamp\analyzer\TxtFileCleaner.java:24: 'for rcurly' has incorrect indentation level 16, expected level should be 4. [Indentation]
+[WARN] C:\Users\320053825\Documents\static-code-analyzer\analyzer\src\main\java\com\philips\bootcamp\analyzer\TxtFileCleaner.java:24:1: Line contains a tab character. [FileTabCharacter]
+[WARN] C:\Users\320053825\Documents\static-code-analyzer\analyzer\src\main\java\com\philips\bootcamp\analyzer\TxtFileCleaner.java:26: 'method def rcurly' has incorrect indentation level 8, expected level should be 2. [Indentation]
+[WARN] C:\Users\320053825\Documents\static-code-analyzer\analyzer\src\main\java\com\philips\bootcamp\analyzer\TxtFileCleaner.java:26:1: Line contains a tab character. [FileTabCharacter]
+[WARN] C:\Users\320053825\Documents\static-code-analyzer\analyzer\src\main\java\com\philips\bootcamp\analyzer\TxtFileCleaner.java:28: 'class def modifier' has incorrect indentation level 8, expected level should be 2. [Indentation]
+[WARN] C:\Users\320053825\Documents\static-code-analyzer\analyzer\src\main\java\com\philips\bootcamp\analyzer\TxtFileCleaner.java:28:1: Line contains a tab character. [FileTabCharacter]
+[WARN] C:\Users\320053825\Documents\static-code-analyzer\analyzer\src\main\java\com\philips\bootcamp\analyzer\TxtFileCleaner.java:30: 'member def modifier' has incorrect indentation level 16, expected level should be 4. [Indentation]
+[WARN] C:\Users\320053825\Documents\static-code-analyzer\analyzer\src\main\java\com\philips\bootcamp\analyzer\TxtFileCleaner.java:30:1: Line contains a tab character. [FileTabCharacter]
+[WARN] C:\Users\320053825\Documents\static-code-analyzer\analyzer\src\main\java\com\philips\bootcamp\analyzer\TxtFileCleaner.java:32: 'ctor def modifier' has incorrect indentation level 16, expected level should be 4. [Indentation]
+[WARN] C:\Users\320053825\Documents\static-code-analyzer\analyzer\src\main\java\com\philips\bootcamp\analyzer\TxtFileCleaner.java:32:1: Line contains a tab character. [FileTabCharacter]
+[WARN] C:\Users\320053825\Documents\static-code-analyzer\analyzer\src\main\java\com\philips\bootcamp\analyzer\TxtFileCleaner.java:33: 'ctor def' child has incorrect indentation level 24, expected level should be 6. [Indentation]
+[WARN] C:\Users\320053825\Documents\static-code-analyzer\analyzer\src\main\java\com\philips\bootcamp\analyzer\TxtFileCleaner.java:33:1: Line contains a tab character. [FileTabCharacter]
+[WARN] C:\Users\320053825\Documents\static-code-analyzer\analyzer\src\main\java\com\philips\bootcamp\analyzer\TxtFileCleaner.java:34: 'ctor def rcurly' has incorrect indentation level 16, expected level should be 4. [Indentation]
+[WARN] C:\Users\320053825\Documents\static-code-analyzer\analyzer\src\main\java\com\philips\bootcamp\analyzer\TxtFileCleaner.java:34:1: Line contains a tab character. [FileTabCharacter]
+[WARN] C:\Users\320053825\Documents\static-code-analyzer\analyzer\src\main\java\com\philips\bootcamp\analyzer\TxtFileCleaner.java:36: 'method def modifier' has incorrect indentation level 16, expected level should be 4. [Indentation]
+[WARN] C:\Users\320053825\Documents\static-code-analyzer\analyzer\src\main\java\com\philips\bootcamp\analyzer\TxtFileCleaner.java:36:1: Line contains a tab character. [FileTabCharacter]
+[WARN] C:\Users\320053825\Documents\static-code-analyzer\analyzer\src\main\java\com\philips\bootcamp\analyzer\TxtFileCleaner.java:37: 'method def' child has incorrect indentation level 24, expected level should be 6. [Indentation]
+[WARN] C:\Users\320053825\Documents\static-code-analyzer\analyzer\src\main\java\com\philips\bootcamp\analyzer\TxtFileCleaner.java:37:1: Line contains a tab character. [FileTabCharacter]
+[WARN] C:\Users\320053825\Documents\static-code-analyzer\analyzer\src\main\java\com\philips\bootcamp\analyzer\TxtFileCleaner.java:38: 'method def rcurly' has incorrect indentation level 16, expected level should be 4. [Indentation]
+[WARN] C:\Users\320053825\Documents\static-code-analyzer\analyzer\src\main\java\com\philips\bootcamp\analyzer\TxtFileCleaner.java:38:1: Line contains a tab character. [FileTabCharacter]
+[WARN] C:\Users\320053825\Documents\static-code-analyzer\analyzer\src\main\java\com\philips\bootcamp\analyzer\TxtFileCleaner.java:39: 'class def rcurly' has incorrect indentation level 8, expected level should be 2. [Indentation]
+[WARN] C:\Users\320053825\Documents\static-code-analyzer\analyzer\src\main\java\com\philips\bootcamp\analyzer\TxtFileCleaner.java:39:1: Line contains a tab character. [FileTabCharacter]

@@ -1,5 +1,7 @@
 package com.philips.bootcamp.analyzer;
 
+import java.io.IOException;
+
 import lombok.Getter;
 import lombok.Setter;
 
@@ -13,7 +15,7 @@ public abstract class Tool {
 		this.filepath = filepath;
 	}
 		
-	public abstract void generateReport();
+	public abstract void generateReport() throws IOException;
 	
 	public abstract boolean isValidReport();
 	

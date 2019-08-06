@@ -3,11 +3,14 @@ package com.philips.bootcamp.analyzer;
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.sql.Timestamp;
 import java.util.List;
+import java.util.Properties;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -38,7 +41,7 @@ public class CheckstyleReportGenerator extends Tool{
 	public static CheckstyleReportGenerator getCheckstyleReportObject (String configFile) throws FileNotFoundException, IOException {
 		Properties p = new Properties();
 		p.load(new FileReader(configFile));		
-		String filepath = p.getProperty("path");
+		String filepath = p.getProperty("path");		
 		String checkstylePath = p.getProperty("checkstylePath");
 		String checkstyleRuleset = p.getProperty("checkstyleRuleset");
 		String checkstyleOutputFile = p.getProperty("checkstyleOutputFile");
@@ -61,14 +64,15 @@ public class CheckstyleReportGenerator extends Tool{
 	}	
 	
 	@Override
-	public void generateReport() throws IOException, InterruptedException {		
+	public void generateReport() throws IOException{		
 		if(isValidReport()) {
-			String executeCheckstyleString = checkstyleJarpath + " -c "+ rulesetCheckstyle + filepath;
+			String command[] = new String[] {"cmd", "/c", "java", "-jar", checkstylePath, "-c", 
+					checkstyleRuleset, this.getFilepath()};
 			Runtime rt = Runtime.getRuntime();
-			Process checkstyleProcess = rt.exec(cmdString + executeCheckstyleString);      
+			Process checkstyleProcess = rt.exec(command);      
             
             JavaFileGetter jfg = new JavaFileGetter();
-            List<String> result = jfg.getFile(filepath);
+            List<String> result = jfg.getFile(this.getFilepath());         
             
             BufferedReader stdInput = new BufferedReader(new InputStreamReader(checkstyleProcess.getInputStream()));
             String s = null;

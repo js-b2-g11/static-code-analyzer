@@ -106,7 +106,7 @@ public class AppTest
            String[] args = {};
            App.main(args);
            assertEquals("No file path specified.\n", outContent.toString());
-    } */
+    } 
     
     @Test
     public void noFilepathforPmd() throws IOException, InterruptedException {
@@ -150,6 +150,6 @@ public class AppTest
     			"/google_checks.xml", "reportCheckStyle.txt");
     	crg.generateCompleteReport();
     	assertEquals("Invalid/Empty file specified!"+System.getProperty("line.separator"), outContent.toString());
-    }
+    } */
     
 }

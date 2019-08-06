@@ -1,9 +1,0 @@
-
-C:\Users\320053825\Downloads\SampleJavaFiles\HelloWorld.java:1:	All classes, interfaces, enums and annotations must belong to a named package
-C:\Users\320053825\Downloads\SampleJavaFiles\HelloWorld.java:4:	Parameter 'args' is not assigned and could be declared final
-[WARN] C:\Users\320053825\Downloads\SampleJavaFiles\HelloWorld.java:4: 'method def modifier' has incorrect indentation level 4, expected level should be 2. [Indentation]
-[WARN] C:\Users\320053825\Downloads\SampleJavaFiles\HelloWorld.java:4:29: '(' is preceded with whitespace. [MethodParamPad]
-[WARN] C:\Users\320053825\Downloads\SampleJavaFiles\HelloWorld.java:5: 'method def' child has incorrect indentation level 8, expected level should be 4. [Indentation]
-[WARN] C:\Users\320053825\Downloads\SampleJavaFiles\HelloWorld.java:5:1: Line contains a tab character. [FileTabCharacter]
-[WARN] C:\Users\320053825\Downloads\SampleJavaFiles\HelloWorld.java:5:28: '(' is preceded with whitespace. [MethodParamPad]
-[WARN] C:\Users\320053825\Downloads\SampleJavaFiles\HelloWorld.java:6: 'method def rcurly' has incorrect indentation level 4, expected level should be 2. [Indentation]

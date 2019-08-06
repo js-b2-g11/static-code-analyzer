@@ -30,16 +30,16 @@
             <div class='fileListContainer'>
                 <ul class="list-group">                
                     <?php
-                        $scannedDir = scandir('./');
+                        $scannedDir = scandir('./../reports/');
                         $files = array_diff($scannedDir, array('.', '..'));
                         sort($files);                         
                         if (count($files) == 0) {
                             echo "Target directory is empty or unspecified";
                             exit;
-                        }
-                        foreach($files as $file){
-                            if (strtolower(substr($file, strrpos($file, '.') + 1)) == 'txt') {
-                                $absolute_path = realpath($file);                
+                        }                        
+                        foreach($files as $file){                            
+                            if (strtolower(substr($file, strrpos($file, '.') + 1)) == 'txt') {                                                            ;
+                                $absolute_path = realpath("./../reports/".$file);                                                                               
                                 print '<a href="/analyzer/web/page.php?filePath='.$absolute_path.'"'.
                                 'class="list-group-item">'.$file.
                                 '</a>';
@@ -55,7 +55,7 @@
         <script type="text/javascript">
             // Load google charts
             var JSONdata;
-            $.getJSON('result.json', function(obj) {
+            $.getJSON('./../reports/result.json', function(obj) {
                 JSONdata = obj;
             });
             google.charts.load('current', {'packages':['corechart']});
