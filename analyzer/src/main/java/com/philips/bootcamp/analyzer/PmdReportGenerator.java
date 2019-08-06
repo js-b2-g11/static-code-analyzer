@@ -24,23 +24,18 @@ import lombok.Setter;
 public class PmdReportGenerator extends Tool {
 
 	private String pmdRuleset;
-	private String pmdOutputFile;
-	private Timestamp reportStartTime;
-	private Timestamp reportEndTime;
 
-	public PmdReportGenerator(String filepath, String pmdRuleset, String pmdOutputFile) {
+	public PmdReportGenerator(String filepath, String pmdRuleset) {
 		super(filepath);
 		this.pmdRuleset = pmdRuleset;
-		this.pmdOutputFile = pmdOutputFile;
 	}
 
-	public static PmdReportGenerator getPmdReportObject(String configFile) throws FileNotFoundException, IOException {
+	public static PmdReportGenerator getPmdReportObject(String filepath) throws FileNotFoundException, IOException {
 		Properties p = new Properties();
-		p.load(new FileReader(configFile));
-		String filepath = p.getProperty("path");		
+//		p.load(new FileReader(configFile));
+//		String filepath = p.getProperty("path");		
 		String pmdRuleset = p.getProperty("pmdRuleset");
-		String pmdOutPutFile = p.getProperty("pmdOutputFile");
-		PmdReportGenerator report = new PmdReportGenerator(filepath, pmdRuleset, pmdOutPutFile);
+		PmdReportGenerator report = new PmdReportGenerator(filepath, pmdRuleset);
 		return report;
 	}
 
@@ -78,6 +73,9 @@ public class PmdReportGenerator extends Tool {
 				}
 			}
 			System.out.print("PMD report generated\n");
+		}
+		else {
+			System.out.println("Invalid/Empty file specified!");
 		}
 	}
 
