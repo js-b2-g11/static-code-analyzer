@@ -8,27 +8,21 @@ public class App
     		
     		if (args.length > 0) {
  
-    			String filepath = args[0];
-    			filepath = filepath.replace("\\", "\\\\");
-    			System.out.println(filepath);
+    			String filepath = args[0];    			
     			Merger vf = new Merger();
+    			FileFilter filter = new FileFilter();
+    			filter.cleartxtFiles("./reports", ".txt");    			
     			IssueCounter Issues = new IssueCounter();
-    			
-    			
 				vf.genAndMergeFile(filepath);
-				
 				Issues.getIssueCount(filepath);
-//				EmailReport.executeSendEmail();
     			
-    		} else {
-    			
-    			System.out.print("No file path specified.\n");
-//    			System.exit(0);    			
+    		} else {    			
+    			System.out.print("No file path specified.\n");    			
     		}
     		
     	} catch(Exception e) {
     		
-    		System.out.print("exception happened - here's what I know: \n");
+    		System.out.print("Exception occured - here's what I know: \n");
             e.printStackTrace();
             System.exit(-1);
     	} 

@@ -11,16 +11,14 @@ import java.util.stream.Stream;
 public class JavaFileGetter {
 	public List<String> getFile(String filepath) {
 		List<String> result = null;
-	try (Stream<Path> walk = Files.walk(Paths.get(filepath))) 
-	{
-		result = walk.map(x -> x.toString())
-				.filter(f -> f.endsWith(".java")).collect(Collectors.toList());
-		
-//		result.forEach(System.out::println);
-
-	} catch (IOException e) {
-		e.printStackTrace();
-	}
+		try (Stream<Path> walk = Files.walk(Paths.get(filepath))) 
+		{
+			result = walk.map(x -> x.toString())
+					.filter(f -> f.endsWith(".java")).collect(Collectors.toList());			
+	
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
 	return result;
 }
 }

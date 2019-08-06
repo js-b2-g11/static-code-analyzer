@@ -71,7 +71,7 @@ public class IssueCounter {
 }
       map.forEach((k,v) -> System.out.println(k + " = " + v));
       try {
-            mapper.writeValue(new File("result.json"), map);
+            mapper.writeValue(new File("./reports/result.json"), map);
         } catch (Exception e) {
             e.printStackTrace();
         } 
