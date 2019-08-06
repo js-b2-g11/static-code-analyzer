@@ -2,6 +2,7 @@ package com.philips.bootcamp.analyzer;
 
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
+import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.io.InputStreamReader;
@@ -60,31 +61,33 @@ public class PmdReportGenerator extends Tool{
 			while ((s = stdInput.readLine()) != null) {
 
 				for(int i=0;i<result.size();i++) {
-
-			    Pattern p = Pattern.compile("^.*\\b("+result.get(i).replace("\\", "\\\\")+")\\b.*$");
-			    Matcher m = p.matcher(s);
-			    if(m.find()) {
-			    	String[] arr = (m.group(1).split(".java"));
-			        BufferedWriter writer = new BufferedWriter(
-                            new FileWriter(filepath+"\\main"+arr[1].replace("\\", "_")+".txt", true)  //Set true for append mode
-                        ); 
-			        writer.newLine();   //Add new line
-			        writer.write(m.group());
-			        writer.close();
-			        
-			    	}   	
-				}
-			}			
-			System.out.println("Pmd Report generated");
-		} else {
-			System.out.println("Invalid/Empty file specified!");
+					File file = new File(result.get(i));					
+					String fileNameWithOutExt = file.getName().replaceFirst("[.][^.]+$", "");										
+					Pattern p = Pattern.compile("^.*\\b("+result.get(i).replace("\\", "\\\\")+")\\b.*$");
+				    Matcher m = p.matcher(s);
+				    if(m.find()) {				    	
+						BufferedWriter writer = new BufferedWriter(
+	                          new FileWriter("./reports/"+fileNameWithOutExt+".txt", true)  //Set true for append mode
+	                      ); 
+				        writer.newLine();   //Add new line
+				        writer.write(m.group());
+				        writer.close();
+				    }
+				}												
+			}
+			System.out.print("PMD report generated\n");
 		}
 	}
 
+<<<<<<< HEAD
 	@Override
 	public boolean isValidReport() {		
 		if (this.getFilepath().equals(null) || this.getFilepath()=="")
 			return false;
 		return (FileValidator.isValidPath(this.getFilepath()));
 	}			
+=======
+	}
+	
+>>>>>>> 17a1f1a... add merge functionality, remove comments and misc
 }
