@@ -18,7 +18,7 @@ import org.junit.Test;
 import com.philips.bootcamp.utils.Values;
 
 /**
- * Unit test for simple App.
+ * Unit tests for SCA.
  */
 public class AppTest 
 {
