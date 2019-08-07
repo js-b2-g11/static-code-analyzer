@@ -1,1 +1,1 @@
-{"CommentsIndentation":6,"CustomImportOrder":7,"AvoidStarImport":3,"MethodParamPad":1,"MissingJavadocMethod":11,"NeedBraces":4,"Indentation":374,"WARN":842,"FileTabCharacter":343,"RightCurlySame":5,"LineLength":32,"WhitespaceAround":41,"EmptyLineSeparator":1,"LeftCurly":9,"AbbreviationAsWordInName":2,"ArrayTypeStyle":3}
+{"FileTabCharacter":4,"CustomImportOrder":1,"LineLength":2,"WhitespaceAround":4,"AvoidStarImport":4,"SummaryJavadoc":1,"LeftCurly":2,"MissingJavadocMethod":1,"Indentation":75,"AbbreviationAsWordInName":1,"WARN":97,"ArrayTypeStyle":2}

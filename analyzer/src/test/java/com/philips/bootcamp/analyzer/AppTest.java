@@ -28,7 +28,7 @@ public class AppTest
     {
     	   final ByteArrayOutputStream outContent = new ByteArrayOutputStream();
            System.setOut(new PrintStream(outContent));
-           String[] args = {"C:\\Users\\320053825\\Documents\\static-code-analyzer"};
+           String[] args = {"./../helloworld"};
            App.main(args);
            assertEquals("Valid file path detected!\n"
            		+ "PMD report generated\n"
@@ -40,7 +40,7 @@ public class AppTest
     {
     	final ByteArrayOutputStream outContent = new ByteArrayOutputStream();
     	System.setOut(new PrintStream(outContent));
-    	String filepath = "C:\\Users\\320053825\\Documents\\static-code-analyzer";
+    	String filepath = "./../helloworld";
     	PmdReportGenerator pmd = new PmdReportGenerator(filepath, 
     			"category/java/codestyle.xml");
     	pmd.generateReport();
@@ -52,7 +52,7 @@ public class AppTest
     {
     	final ByteArrayOutputStream outContent = new ByteArrayOutputStream(); 
     	System.setOut(new PrintStream(outContent));
-    	String filepath = "C:\\Users\\320053825\\Documents\\static-code-analyzer";
+    	String filepath = "./../helloworld";
     	CheckstyleReportGenerator crg = new CheckstyleReportGenerator(filepath, "C:/Checkstyle/checkstyle-8.22-all.jar", 
     			"/google_checks.xml");
     	crg.generateReport();

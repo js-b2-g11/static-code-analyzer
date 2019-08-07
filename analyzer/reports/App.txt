@@ -1,44 +1,19 @@
 
-C:\Users\320053825\Documents\static-code-analyzer\analyzer\src\main\java\com\philips\bootcamp\analyzer\App.java:5:	Avoid short class names like App
-C:\Users\320053825\Documents\static-code-analyzer\analyzer\src\main\java\com\philips\bootcamp\analyzer\App.java:6:	Parameter 'args' is not assigned and could be declared final
-C:\Users\320053825\Documents\static-code-analyzer\analyzer\src\main\java\com\philips\bootcamp\analyzer\App.java:11:	Local variable 'filepath' could be declared final
-C:\Users\320053825\Documents\static-code-analyzer\analyzer\src\main\java\com\philips\bootcamp\analyzer\App.java:12:	Local variable 'mergeObj' could be declared final
-C:\Users\320053825\Documents\static-code-analyzer\analyzer\src\main\java\com\philips\bootcamp\analyzer\App.java:13:	Local variable 'cleaner' could be declared final
-C:\Users\320053825\Documents\static-code-analyzer\analyzer\src\main\java\com\philips\bootcamp\analyzer\App.java:16:	Local variable 'issueCounter' could be declared final
-[WARN] C:\Users\320053825\Documents\static-code-analyzer\analyzer\src\main\java\com\philips\bootcamp\analyzer\App.java:6: 'method def modifier' has incorrect indentation level 8, expected level should be 2. [Indentation]
-[WARN] C:\Users\320053825\Documents\static-code-analyzer\analyzer\src\main\java\com\philips\bootcamp\analyzer\App.java:6:1: Line contains a tab character. [FileTabCharacter]
-[WARN] C:\Users\320053825\Documents\static-code-analyzer\analyzer\src\main\java\com\philips\bootcamp\analyzer\App.java:6:9: Missing a Javadoc comment. [MissingJavadocMethod]
-[WARN] C:\Users\320053825\Documents\static-code-analyzer\analyzer\src\main\java\com\philips\bootcamp\analyzer\App.java:7:1: Line contains a tab character. [FileTabCharacter]
-[WARN] C:\Users\320053825\Documents\static-code-analyzer\analyzer\src\main\java\com\philips\bootcamp\analyzer\App.java:8: Comment has incorrect indentation level 0, expected is 2, indentation should be the same level as line 9. [CommentsIndentation]
-[WARN] C:\Users\320053825\Documents\static-code-analyzer\analyzer\src\main\java\com\philips\bootcamp\analyzer\App.java:8:3: Line contains a tab character. [FileTabCharacter]
-[WARN] C:\Users\320053825\Documents\static-code-analyzer\analyzer\src\main\java\com\philips\bootcamp\analyzer\App.java:9: 'if' has incorrect indentation level 16, expected level should be 4. [Indentation]
-[WARN] C:\Users\320053825\Documents\static-code-analyzer\analyzer\src\main\java\com\philips\bootcamp\analyzer\App.java:9:1: Line contains a tab character. [FileTabCharacter]
-[WARN] C:\Users\320053825\Documents\static-code-analyzer\analyzer\src\main\java\com\philips\bootcamp\analyzer\App.java:9:17: WhitespaceAround: 'if' is not followed by whitespace. Empty blocks may only be represented as {} when not part of a multi-block statement (4.1.3) [WhitespaceAround]
-[WARN] C:\Users\320053825\Documents\static-code-analyzer\analyzer\src\main\java\com\philips\bootcamp\analyzer\App.java:9:31: WhitespaceAround: '>' is not followed by whitespace. Empty blocks may only be represented as {} when not part of a multi-block statement (4.1.3) [WhitespaceAround]
-[WARN] C:\Users\320053825\Documents\static-code-analyzer\analyzer\src\main\java\com\philips\bootcamp\analyzer\App.java:9:31: WhitespaceAround: '>' is not preceded with whitespace. [WhitespaceAround]
-[WARN] C:\Users\320053825\Documents\static-code-analyzer\analyzer\src\main\java\com\philips\bootcamp\analyzer\App.java:10:1: Line contains a tab character. [FileTabCharacter]
-[WARN] C:\Users\320053825\Documents\static-code-analyzer\analyzer\src\main\java\com\philips\bootcamp\analyzer\App.java:11: 'if' child has incorrect indentation level 24, expected level should be 6. [Indentation]
-[WARN] C:\Users\320053825\Documents\static-code-analyzer\analyzer\src\main\java\com\philips\bootcamp\analyzer\App.java:11:1: Line contains a tab character. [FileTabCharacter]
-[WARN] C:\Users\320053825\Documents\static-code-analyzer\analyzer\src\main\java\com\philips\bootcamp\analyzer\App.java:12: 'if' child has incorrect indentation level 24, expected level should be 6. [Indentation]
-[WARN] C:\Users\320053825\Documents\static-code-analyzer\analyzer\src\main\java\com\philips\bootcamp\analyzer\App.java:12:1: Line contains a tab character. [FileTabCharacter]
-[WARN] C:\Users\320053825\Documents\static-code-analyzer\analyzer\src\main\java\com\philips\bootcamp\analyzer\App.java:13: 'if' child has incorrect indentation level 24, expected level should be 6. [Indentation]
-[WARN] C:\Users\320053825\Documents\static-code-analyzer\analyzer\src\main\java\com\philips\bootcamp\analyzer\App.java:13:1: Line contains a tab character. [FileTabCharacter]
-[WARN] C:\Users\320053825\Documents\static-code-analyzer\analyzer\src\main\java\com\philips\bootcamp\analyzer\App.java:14: 'if' child has incorrect indentation level 24, expected level should be 6. [Indentation]
-[WARN] C:\Users\320053825\Documents\static-code-analyzer\analyzer\src\main\java\com\philips\bootcamp\analyzer\App.java:14:1: Line contains a tab character. [FileTabCharacter]
-[WARN] C:\Users\320053825\Documents\static-code-analyzer\analyzer\src\main\java\com\philips\bootcamp\analyzer\App.java:15: 'if' child has incorrect indentation level 24, expected level should be 6. [Indentation]
-[WARN] C:\Users\320053825\Documents\static-code-analyzer\analyzer\src\main\java\com\philips\bootcamp\analyzer\App.java:15:1: Line contains a tab character. [FileTabCharacter]
-[WARN] C:\Users\320053825\Documents\static-code-analyzer\analyzer\src\main\java\com\philips\bootcamp\analyzer\App.java:16: 'if' child has incorrect indentation level 24, expected level should be 6. [Indentation]
-[WARN] C:\Users\320053825\Documents\static-code-analyzer\analyzer\src\main\java\com\philips\bootcamp\analyzer\App.java:16:1: Line contains a tab character. [FileTabCharacter]
-[WARN] C:\Users\320053825\Documents\static-code-analyzer\analyzer\src\main\java\com\philips\bootcamp\analyzer\App.java:17: 'if' child has incorrect indentation level 24, expected level should be 6. [Indentation]
-[WARN] C:\Users\320053825\Documents\static-code-analyzer\analyzer\src\main\java\com\philips\bootcamp\analyzer\App.java:17:1: Line contains a tab character. [FileTabCharacter]
-[WARN] C:\Users\320053825\Documents\static-code-analyzer\analyzer\src\main\java\com\philips\bootcamp\analyzer\App.java:18: 'if rcurly' has incorrect indentation level 16, expected level should be 4. [Indentation]
-[WARN] C:\Users\320053825\Documents\static-code-analyzer\analyzer\src\main\java\com\philips\bootcamp\analyzer\App.java:18:1: Line contains a tab character. [FileTabCharacter]
-[WARN] C:\Users\320053825\Documents\static-code-analyzer\analyzer\src\main\java\com\philips\bootcamp\analyzer\App.java:18:17: '}' at column 3 should be on the same line as the next part of a multi-block statement (one that directly contains multiple blocks: if/else-if/else, do/while or try/catch/finally). [RightCurlySame]
-[WARN] C:\Users\320053825\Documents\static-code-analyzer\analyzer\src\main\java\com\philips\bootcamp\analyzer\App.java:19: 'else' has incorrect indentation level 16, expected level should be 4. [Indentation]
-[WARN] C:\Users\320053825\Documents\static-code-analyzer\analyzer\src\main\java\com\philips\bootcamp\analyzer\App.java:19:1: Line contains a tab character. [FileTabCharacter]
-[WARN] C:\Users\320053825\Documents\static-code-analyzer\analyzer\src\main\java\com\philips\bootcamp\analyzer\App.java:20: 'else' child has incorrect indentation level 24, expected level should be 6. [Indentation]
-[WARN] C:\Users\320053825\Documents\static-code-analyzer\analyzer\src\main\java\com\philips\bootcamp\analyzer\App.java:20:1: Line contains a tab character. [FileTabCharacter]
-[WARN] C:\Users\320053825\Documents\static-code-analyzer\analyzer\src\main\java\com\philips\bootcamp\analyzer\App.java:21: 'else rcurly' has incorrect indentation level 24, expected level should be 4. [Indentation]
-[WARN] C:\Users\320053825\Documents\static-code-analyzer\analyzer\src\main\java\com\philips\bootcamp\analyzer\App.java:21:1: Line contains a tab character. [FileTabCharacter]
-[WARN] C:\Users\320053825\Documents\static-code-analyzer\analyzer\src\main\java\com\philips\bootcamp\analyzer\App.java:22: 'method def rcurly' has incorrect indentation level 16, expected level should be 2. [Indentation]
-[WARN] C:\Users\320053825\Documents\static-code-analyzer\analyzer\src\main\java\com\philips\bootcamp\analyzer\App.java:22:1: Line contains a tab character. [FileTabCharacter]
+C:\BootCampProject\static-code-analyzer\helloworld\src\main\java\com\philips\bootcamp\helloworld\App.java:9:	Avoid short class names like App
+C:\BootCampProject\static-code-analyzer\helloworld\src\main\java\com\philips\bootcamp\helloworld\App.java:9:	Each class should declare at least one constructor
+C:\BootCampProject\static-code-analyzer\helloworld\src\main\java\com\philips\bootcamp\helloworld\App.java:15:	Parameter 'args' is not assigned and could be declared final
+C:\BootCampProject\static-code-analyzer\helloworld\src\main\java\com\philips\bootcamp\helloworld\App.java:16:	Local variable 'obj' could be declared final
+[WARN] C:\BootCampProject\static-code-analyzer\helloworld\src\main\java\com\philips\bootcamp\helloworld\App.java:3: Using the '.*' form of import should be avoided - java.io.*. [AvoidStarImport]
+[WARN] C:\BootCampProject\static-code-analyzer\helloworld\src\main\java\com\philips\bootcamp\helloworld\App.java:5: First sentence of Javadoc is missing an ending period. [SummaryJavadoc]
+[WARN] C:\BootCampProject\static-code-analyzer\helloworld\src\main\java\com\philips\bootcamp\helloworld\App.java:10:1: '{' at column 1 should be on the previous line. [LeftCurly]
+[WARN] C:\BootCampProject\static-code-analyzer\helloworld\src\main\java\com\philips\bootcamp\helloworld\App.java:11: 'method def modifier' has incorrect indentation level 4, expected level should be 2. [Indentation]
+[WARN] C:\BootCampProject\static-code-analyzer\helloworld\src\main\java\com\philips\bootcamp\helloworld\App.java:12: 'method def' child has incorrect indentation level 8, expected level should be 4. [Indentation]
+[WARN] C:\BootCampProject\static-code-analyzer\helloworld\src\main\java\com\philips\bootcamp\helloworld\App.java:12:5: Line contains a tab character. [FileTabCharacter]
+[WARN] C:\BootCampProject\static-code-analyzer\helloworld\src\main\java\com\philips\bootcamp\helloworld\App.java:13: 'method def rcurly' has incorrect indentation level 4, expected level should be 2. [Indentation]
+[WARN] C:\BootCampProject\static-code-analyzer\helloworld\src\main\java\com\philips\bootcamp\helloworld\App.java:15: 'method def modifier' has incorrect indentation level 4, expected level should be 2. [Indentation]
+[WARN] C:\BootCampProject\static-code-analyzer\helloworld\src\main\java\com\philips\bootcamp\helloworld\App.java:15:40: Array brackets at illegal position. [ArrayTypeStyle]
+[WARN] C:\BootCampProject\static-code-analyzer\helloworld\src\main\java\com\philips\bootcamp\helloworld\App.java:16: 'method def' child has incorrect indentation level 8, expected level should be 4. [Indentation]
+[WARN] C:\BootCampProject\static-code-analyzer\helloworld\src\main\java\com\philips\bootcamp\helloworld\App.java:16:5: Line contains a tab character. [FileTabCharacter]
+[WARN] C:\BootCampProject\static-code-analyzer\helloworld\src\main\java\com\philips\bootcamp\helloworld\App.java:17: 'method def' child has incorrect indentation level 8, expected level should be 4. [Indentation]
+[WARN] C:\BootCampProject\static-code-analyzer\helloworld\src\main\java\com\philips\bootcamp\helloworld\App.java:17:5: Line contains a tab character. [FileTabCharacter]
+[WARN] C:\BootCampProject\static-code-analyzer\helloworld\src\main\java\com\philips\bootcamp\helloworld\App.java:18: 'method def rcurly' has incorrect indentation level 4, expected level should be 2. [Indentation]
