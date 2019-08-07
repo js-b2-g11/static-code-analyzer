@@ -34,9 +34,7 @@ public class CheckstyleReportGenerator extends Tool{
 	}		
 	
 	public static CheckstyleReportGenerator getCheckstyleReportObject (String filepath) throws FileNotFoundException, IOException {
-		Properties p = new Properties();
-//		p.load(new FileReader(configFile));		
-//		String filepath = p.getProperty("path");		
+		Properties p = new Properties();		
 		p.load(new FileReader("./../sca.properties"));
 		String checkstylePath = p.getProperty("checkstylePath");
 		String checkstyleRuleset = p.getProperty("checkstyleRuleset");

@@ -32,8 +32,7 @@ public class PmdReportGenerator extends Tool {
 
 	public static PmdReportGenerator getPmdReportObject(String filepath) throws FileNotFoundException, IOException {
 		Properties p = new Properties();
-		p.load(new FileReader("./../sca.properties"));
-//		String filepath = p.getProperty("path");		
+		p.load(new FileReader("./../sca.properties"));	
 		String pmdRuleset = p.getProperty("pmdRuleset");
 		PmdReportGenerator report = new PmdReportGenerator(filepath, pmdRuleset);
 		return report;

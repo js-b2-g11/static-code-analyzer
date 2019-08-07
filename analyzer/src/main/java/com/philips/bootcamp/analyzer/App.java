@@ -4,10 +4,7 @@ import java.io.IOException;
 
 public class App {
 	public static void main(String[] args) throws InterruptedException, IOException {
-			
-//			String configFilePath = "./../sca.properties";
-		if(args.length>0) {
-			
+		if(args.length>0) {			
 			String filepath = args[0];						
 			Merger mergeObj = new Merger();
 			TxtFileCleaner cleaner = new TxtFileCleaner();

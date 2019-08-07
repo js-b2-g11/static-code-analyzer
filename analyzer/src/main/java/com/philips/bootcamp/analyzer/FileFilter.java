@@ -5,13 +5,6 @@ import java.io.FilenameFilter;
 
 public class FileFilter {
 		
-//		   private static final String FILE_DIR = "C:\\BootCampProject\\static-code-analyzer\\analyzer";
-//		   private static final String FILE_TEXT_EXT = ".txt";
-			
-//		   public static void main(String args[]) {
-//			new FileChecker().deleteFile(FILE_DIR,FILE_TEXT_EXT);
-//		   }
-//			
 		   public void cleartxtFiles(String filedir, String ext){
 				
 		     GenericExtFilter filter = new GenericExtFilter(ext);
