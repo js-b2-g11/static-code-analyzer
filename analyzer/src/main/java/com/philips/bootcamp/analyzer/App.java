@@ -8,9 +8,7 @@ public class App {
 //			String configFilePath = "./../sca.properties";
 		if(args.length>0) {
 			
-			String filepath = args[0];
-			filepath = filepath.replace("\\", "\\\\");
-			System.out.println(filepath);
+			String filepath = args[0];						
 			Merger mergeObj = new Merger();
 			TxtFileCleaner cleaner = new TxtFileCleaner();
 			cleaner.cleartxtFiles("./reports", ".txt");			

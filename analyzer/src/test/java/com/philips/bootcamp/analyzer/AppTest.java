@@ -23,12 +23,12 @@ import com.philips.bootcamp.utils.Values;
 public class AppTest 
 {
 
-@Test
+	@Test
     public void testReportGeneration() throws InterruptedException, IOException
     {
     	   final ByteArrayOutputStream outContent = new ByteArrayOutputStream();
            System.setOut(new PrintStream(outContent));
-           String[] args = {"C:\\BootCampProject\\static-code-analyzer\\helloworld"};
+           String[] args = {"C:\\Users\\320053825\\Documents\\static-code-analyzer"};
            App.main(args);
            assertEquals("Valid file path detected!\n"
            		+ "PMD report generated\n"
@@ -40,7 +40,7 @@ public class AppTest
     {
     	final ByteArrayOutputStream outContent = new ByteArrayOutputStream();
     	System.setOut(new PrintStream(outContent));
-    	String filepath = "C:\\BootCampProject\\static-code-analyzer\\helloworld";
+    	String filepath = "C:\\Users\\320053825\\Documents\\static-code-analyzer";
     	PmdReportGenerator pmd = new PmdReportGenerator(filepath, 
     			"category/java/codestyle.xml");
     	pmd.generateReport();
@@ -48,11 +48,11 @@ public class AppTest
     }
 	
 	@Test
-    public void testReportGenerationForChecksytle() throws InterruptedException, IOException
+    public void testReportGenerationForCheckstyle() throws InterruptedException, IOException
     {
     	final ByteArrayOutputStream outContent = new ByteArrayOutputStream(); 
     	System.setOut(new PrintStream(outContent));
-    	String filepath = "C:\\BootCampProject\\static-code-analyzer\\helloworld";
+    	String filepath = "C:\\Users\\320053825\\Documents\\static-code-analyzer";
     	CheckstyleReportGenerator crg = new CheckstyleReportGenerator(filepath, "C:/Checkstyle/checkstyle-8.22-all.jar", 
     			"/google_checks.xml");
     	crg.generateReport();

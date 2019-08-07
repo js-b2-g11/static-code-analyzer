@@ -32,7 +32,7 @@ public class PmdReportGenerator extends Tool {
 
 	public static PmdReportGenerator getPmdReportObject(String filepath) throws FileNotFoundException, IOException {
 		Properties p = new Properties();
-//		p.load(new FileReader(configFile));
+		p.load(new FileReader("./../sca.properties"));
 //		String filepath = p.getProperty("path");		
 		String pmdRuleset = p.getProperty("pmdRuleset");
 		PmdReportGenerator report = new PmdReportGenerator(filepath, pmdRuleset);
@@ -45,7 +45,7 @@ public class PmdReportGenerator extends Tool {
 			String command[] = new String[] { "pmd.bat", "-d", this.getFilepath(), "-f", "text", "-R", pmdRuleset};
 			Runtime rt = Runtime.getRuntime();
 
-			Process pmdProcess = null;
+			Process pmdProcess;
 			pmdProcess = rt.exec(command);
 
 			JavaFileGetter jfg = new JavaFileGetter();

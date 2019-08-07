@@ -37,6 +37,7 @@ public class CheckstyleReportGenerator extends Tool{
 		Properties p = new Properties();
 //		p.load(new FileReader(configFile));		
 //		String filepath = p.getProperty("path");		
+		p.load(new FileReader("./../sca.properties"));
 		String checkstylePath = p.getProperty("checkstylePath");
 		String checkstyleRuleset = p.getProperty("checkstyleRuleset");
 		CheckstyleReportGenerator report = new CheckstyleReportGenerator(filepath, checkstylePath, 
